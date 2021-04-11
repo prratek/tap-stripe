@@ -36,9 +36,26 @@ STREAM_ENDPOINTS = {
     "subscription_schedules": stripe.SubscriptionSchedule
 }
 
+EVENT_TYPE_FILTERS = {
+    "subscriptions": "customer.subscription.*"
+}
+
 
 class StripeStream(Stream):
     """Stream class for Stripe streams."""
+
+    def _make_created_filter(self):
+        return {
+            "gte": self.get_starting_timestamp(partition=None)
+        }
+
+    def _get_iterator(self, limit=100) -> stripe.api_resources.list_object.ListObject:
+        sdk_object = stripe.Event
+        return sdk_object.list(
+            type=EVENT_TYPE_FILTERS[self.name],
+            created=self._make_created_filter(),
+            limit=limit
+        )
 
     def get_records(self, partition: Optional[dict] = None) -> Iterable[dict]:
         """Return a generator of row-type dictionary objects.
@@ -48,41 +65,17 @@ class StripeStream(Stream):
         require partitioning and should ignore the `partitions` argument.
         """
 
-        # TODO: Write logic to extract data from the upstream source.
-        # rows = mysource.getall()
-        # for row in rows:
-        #     yield row.to_dict()
-        raise NotImplementedError("The method is not yet implemented (TODO)")
+        stripe.api_key = self._config["api_key"]
+        iterator = self._get_iterator()
+
+        for row in iterator.auto_paging_iter():
+            yield row.to_dict()
 
 
-# TODO: - Override `UsersStream` and `GroupsStream` with your own stream definition.
-#       - Copy-paste as many times as needed to create multiple stream types.
-class UsersStream(StripeStream):
-    name = "users"
+class SubscriptionsStream(StripeStream):
+    """Stripe Subscriptions stream."""
 
+    name = "subscriptions"
     primary_keys = ["id"]
-    replication_key = None
-    # Optionally, you may also use `schema_filepath` in place of `schema`:
-    # schema_filepath = SCHEMAS_DIR / "users.json"
-    schema = PropertiesList(
-        Property("name", StringType),
-        Property("id", StringType),
-        Property("age", IntegerType),
-        Property("email", StringType),
-        Property("street", StringType),
-        Property("city", StringType),
-        Property("state", StringType),
-        Property("zip", StringType),
-    ).to_dict()
-
-
-class GroupsStream(StripeStream):
-    name = "groups"
-
-    primary_keys = ["id"]
-    replication_key = "modified"
-    schema = PropertiesList(
-        Property("name", StringType),
-        Property("id", StringType),
-        Property("modified", DateTimeType),
-    ).to_dict()
+    replication_key = "created"
+    schema_filepath = SCHEMAS_DIR / "subscriptions.json"
