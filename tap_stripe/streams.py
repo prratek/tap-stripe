@@ -1,25 +1,20 @@
 """Stream class for tap-stripe."""
 
 from pathlib import Path
-from typing import Any, Dict, Optional, Union, List, Iterable
+from typing import Optional, Iterable
 
 import stripe
 from singer_sdk.streams import Stream
-from singer_sdk.typing import (
-    ArrayType,
-    BooleanType,
-    DateTimeType,
-    IntegerType,
-    NumberType,
-    ObjectType,
-    PropertiesList,
-    Property,
-    StringType,
+from singer_sdk.streams.core import (
+    REPLICATION_FULL_TABLE,
+    REPLICATION_INCREMENTAL,
+    REPLICATION_LOG_BASED
 )
+
 
 SCHEMAS_DIR = Path(__file__).parent / Path("./schemas")
 
-STREAM_ENDPOINTS = {
+SDK_OBJECTS = {
     "balance_transactions": stripe.BalanceTransaction,
     "charges": stripe.Charge,
     "coupons": stripe.Coupon,
@@ -45,17 +40,37 @@ class StripeStream(Stream):
     """Stream class for Stripe streams."""
 
     def _make_created_filter(self):
-        return {
-            "gte": self.get_starting_timestamp(partition=None)
-        }
+        return {"gte": self.get_starting_timestamp(partition=None)}
+
+    def _make_params(self, limit=100) -> dict:
+        if self.replication_method == REPLICATION_INCREMENTAL:
+            return {
+                "type": EVENT_TYPE_FILTERS[self.name],
+                "created": self._make_created_filter(),
+                "limit": limit
+            }
+        elif self.replication_method == REPLICATION_FULL_TABLE:
+            if self.name == "subscriptions":
+                return {
+                    "created": self._make_created_filter(),
+                    "limit": limit,
+                    "status": "all"
+                }
+            else:
+                return {
+                    "created": self._make_created_filter(),
+                    "limit": limit
+                }
+        else:
+            raise ValueError
 
     def _get_iterator(self, limit=100) -> stripe.api_resources.list_object.ListObject:
-        sdk_object = stripe.Event
-        return sdk_object.list(
-            type=EVENT_TYPE_FILTERS[self.name],
-            created=self._make_created_filter(),
-            limit=limit
-        )
+
+        # TODO: Refactor sdk_object into class property
+        sdk_object = stripe.Event if self.replication_method == REPLICATION_INCREMENTAL else SDK_OBJECTS[self.name]
+        params = self._make_params(limit=limit)
+
+        return sdk_object.list(**params)
 
     def get_records(self, partition: Optional[dict] = None) -> Iterable[dict]:
         """Return a generator of row-type dictionary objects.
