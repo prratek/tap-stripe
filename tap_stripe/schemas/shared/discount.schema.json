@@ -1,158 +1,158 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema",
-    "$id": "discount.schema.json",
-    "type": ["object", "null"],
-    "title": "The root schema",
-    "description": "The root schema comprises the entire JSON document.",
-    "default": {},
-    "examples": [
-        {
-            "checkout_session": null,
-            "coupon": {
-                "amount_off": null,
-                "created": 1594679248,
-                "currency": null,
-                "duration": "once",
-                "duration_in_months": null,
-                "id": "FREEMO",
-                "livemode": true,
-                "max_redemptions": null,
-                "metadata": null,
-                "name": "Intro Rate",
-                "object": "coupon",
-                "percent_off": 100.0,
-                "redeem_by": null,
-                "times_redeemed": 57321,
-                "valid": true
-            },
-            "customer": "cus_IOnNwaLcvW47cA",
-            "end": null,
-            "id": "di_1Hnzn1I8OBWPiWBSj9k4aOyB",
-            "invoice": null,
-            "invoice_item": null,
-            "object": "discount",
-            "promotion_code": null,
-            "start": 1605502687,
-            "subscription": "sub_IOnN4fNVNbrjqn"
-        }
-    ],
-    "required": [
-        "checkout_session",
-        "coupon",
-        "customer",
-        "end",
-        "id",
-        "invoice",
-        "invoice_item",
-        "object",
-        "promotion_code",
-        "start",
-        "subscription"
-    ],
-    "properties": {
-        "checkout_session": {
-            "$id": "#/properties/checkout_session",
-            "type": "null",
-            "title": "The checkout_session schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": null,
-            "examples": [
-                null
-            ]
-        },
-        "coupon": {
-            "$ref": "shared/coupon.schema.json#/"
-        },
-        "customer": {
-            "$id": "#/properties/customer",
-            "type": "string",
-            "title": "The customer schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": "",
-            "examples": [
-                "cus_IOnNwaLcvW47cA"
-            ]
-        },
-        "end": {
-            "$id": "#/properties/end",
-            "type": ["integer", "null"],
-            "title": "The end schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": null,
-            "examples": [
-                null
-            ]
-        },
-        "id": {
-            "$id": "#/properties/id",
-            "type": "string",
-            "title": "The id schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": "",
-            "examples": [
-                "di_1Hnzn1I8OBWPiWBSj9k4aOyB"
-            ]
-        },
-        "invoice": {
-            "$id": "#/properties/invoice",
-            "type": "null",
-            "title": "The invoice schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": null,
-            "examples": [
-                null
-            ]
-        },
-        "invoice_item": {
-            "$id": "#/properties/invoice_item",
-            "type": "null",
-            "title": "The invoice_item schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": null,
-            "examples": [
-                null
-            ]
-        },
-        "object": {
-            "$id": "#/properties/object",
-            "type": "string",
-            "title": "The object schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": "",
-            "examples": [
-                "discount"
-            ]
-        },
-        "promotion_code": {
-            "$id": "#/properties/promotion_code",
-            "type": "null",
-            "title": "The promotion_code schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": null,
-            "examples": [
-                null
-            ]
-        },
-        "start": {
-            "$id": "#/properties/start",
-            "type": "integer",
-            "title": "The start schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": 0,
-            "examples": [
-                1605502687
-            ]
-        },
-        "subscription": {
-            "$id": "#/properties/subscription",
-            "type": "string",
-            "title": "The subscription schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": "",
-            "examples": [
-                "sub_IOnN4fNVNbrjqn"
-            ]
-        }
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "discount.schema.json",
+  "type": ["object", "null"],
+  "title": "The root schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "default": {},
+  "examples": [
+    {
+      "checkout_session": null,
+      "coupon": {
+        "amount_off": null,
+        "created": 1594679248,
+        "currency": null,
+        "duration": "once",
+        "duration_in_months": null,
+        "id": "FREEMO",
+        "livemode": true,
+        "max_redemptions": null,
+        "metadata": null,
+        "name": "Intro Rate",
+        "object": "coupon",
+        "percent_off": 100.0,
+        "redeem_by": null,
+        "times_redeemed": 57321,
+        "valid": true
+      },
+      "customer": "cus_IOnNwaLcvW47cA",
+      "end": null,
+      "id": "di_1Hnzn1I8OBWPiWBSj9k4aOyB",
+      "invoice": null,
+      "invoice_item": null,
+      "object": "discount",
+      "promotion_code": null,
+      "start": 1605502687,
+      "subscription": "sub_IOnN4fNVNbrjqn"
+    }
+  ],
+  "required": [
+    "checkout_session",
+    "coupon",
+    "customer",
+    "end",
+    "id",
+    "invoice",
+    "invoice_item",
+    "object",
+    "promotion_code",
+    "start",
+    "subscription"
+  ],
+  "properties": {
+    "checkout_session": {
+      "$id": "#/properties/checkout_session",
+      "type": "null",
+      "title": "The checkout_session schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
     },
-    "additionalProperties": true
+    "coupon": {
+      "$ref": "shared/coupon.schema.json#/"
+    },
+    "customer": {
+      "$id": "#/properties/customer",
+      "type": "string",
+      "title": "The customer schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "cus_IOnNwaLcvW47cA"
+      ]
+    },
+    "end": {
+      "$id": "#/properties/end",
+      "type": ["integer", "null"],
+      "title": "The end schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "id": {
+      "$id": "#/properties/id",
+      "type": "string",
+      "title": "The id schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "di_1Hnzn1I8OBWPiWBSj9k4aOyB"
+      ]
+    },
+    "invoice": {
+      "$id": "#/properties/invoice",
+      "type": "null",
+      "title": "The invoice schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "invoice_item": {
+      "$id": "#/properties/invoice_item",
+      "type": "null",
+      "title": "The invoice_item schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "object": {
+      "$id": "#/properties/object",
+      "type": "string",
+      "title": "The object schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "discount"
+      ]
+    },
+    "promotion_code": {
+      "$id": "#/properties/promotion_code",
+      "type": "null",
+      "title": "The promotion_code schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "start": {
+      "$id": "#/properties/start",
+      "type": "integer",
+      "title": "The start schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": 0,
+      "examples": [
+        1605502687
+      ]
+    },
+    "subscription": {
+      "$id": "#/properties/subscription",
+      "type": "string",
+      "title": "The subscription schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "sub_IOnN4fNVNbrjqn"
+      ]
+    }
+  },
+  "additionalProperties": true
 }

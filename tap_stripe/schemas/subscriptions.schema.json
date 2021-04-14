@@ -176,17 +176,6 @@
       "type": "customer.subscription.updated"
     }
   ],
-  "required": [
-    "id",
-    "object",
-    "api_version",
-    "created",
-    "data",
-    "livemode",
-    "pending_webhooks",
-    "request",
-    "type"
-  ],
   "properties": {
     "id": {
       "$id": "#/properties/id",
@@ -392,9 +381,6 @@
           "previous_attributes": "{\"current_period_end\": 1608613189, \"current_period_start\": 1606021189, \"latest_invoice\": \"in_1HqAgJI8OBWPiWBSYsJFN10N\"}"
         }
       ],
-      "required": [
-        "object"
-      ],
       "properties": {
         "object": {
           "$id": "#/properties/data/properties/object",
@@ -556,48 +542,6 @@
               "trial_end": 1603342789,
               "trial_start": 1600750789
             }
-          ],
-          "required": [
-            "id",
-            "object",
-            "application_fee_percent",
-            "billing",
-            "billing_cycle_anchor",
-            "billing_thresholds",
-            "cancel_at",
-            "cancel_at_period_end",
-            "canceled_at",
-            "collection_method",
-            "created",
-            "current_period_end",
-            "current_period_start",
-            "customer",
-            "days_until_due",
-            "default_payment_method",
-            "default_source",
-            "default_tax_rates",
-            "discount",
-            "ended_at",
-            "invoice_customer_balance_settings",
-            "items",
-            "latest_invoice",
-            "livemode",
-            "metadata",
-            "next_pending_invoice_item_invoice",
-            "pause_collection",
-            "pending_invoice_item_interval",
-            "pending_setup_intent",
-            "pending_update",
-            "plan",
-            "quantity",
-            "schedule",
-            "start",
-            "start_date",
-            "status",
-            "tax_percent",
-            "transfer_data",
-            "trial_end",
-            "trial_start"
           ],
           "properties": {
             "id": {
@@ -785,7 +729,324 @@
               }
             },
             "discount": {
-              "$ref": "shared/discount.schema.json#/"
+              "$id": "discount.schema.json",
+              "type": ["object", "null"],
+              "title": "The root schema",
+              "description": "The root schema comprises the entire JSON document.",
+              "default": {},
+              "examples": [
+                {
+                  "checkout_session": null,
+                  "coupon": {
+                    "amount_off": null,
+                    "created": 1594679248,
+                    "currency": null,
+                    "duration": "once",
+                    "duration_in_months": null,
+                    "id": "FREEMO",
+                    "livemode": true,
+                    "max_redemptions": null,
+                    "metadata": null,
+                    "name": "Intro Rate",
+                    "object": "coupon",
+                    "percent_off": 100.0,
+                    "redeem_by": null,
+                    "times_redeemed": 57321,
+                    "valid": true
+                  },
+                  "customer": "cus_IOnNwaLcvW47cA",
+                  "end": null,
+                  "id": "di_1Hnzn1I8OBWPiWBSj9k4aOyB",
+                  "invoice": null,
+                  "invoice_item": null,
+                  "object": "discount",
+                  "promotion_code": null,
+                  "start": 1605502687,
+                  "subscription": "sub_IOnN4fNVNbrjqn"
+                }
+              ],
+              "properties": {
+                "checkout_session": {
+                  "$id": "#/properties/checkout_session",
+                  "type": "null",
+                  "title": "The checkout_session schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": null,
+                  "examples": [
+                    null
+                  ]
+                },
+                "coupon": {
+                  "$id": "coupon.schema.json",
+                  "type": ["object", "null"],
+                  "title": "The root schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": {},
+                  "examples": [
+                    {
+                      "amount_off": null,
+                      "created": 1594679248,
+                      "currency": null,
+                      "duration": "once",
+                      "duration_in_months": null,
+                      "id": "FREEMO",
+                      "livemode": true,
+                      "max_redemptions": null,
+                      "metadata": null,
+                      "name": "Intro Rate",
+                      "object": "coupon",
+                      "percent_off": 100.0,
+                      "redeem_by": null,
+                      "times_redeemed": 57321,
+                      "valid": true
+                    }
+                  ],
+                  "properties": {
+                    "amount_off": {
+                      "$id": "#/properties/coupon/properties/amount_off",
+                      "type": ["integer", "null"],
+                      "title": "The amount_off schema",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": null,
+                      "examples": [
+                        null
+                      ]
+                    },
+                    "created": {
+                      "$id": "#/properties/coupon/properties/created",
+                      "type": "integer",
+                      "title": "The created schema",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": 0,
+                      "examples": [
+                        1594679248
+                      ]
+                    },
+                    "currency": {
+                      "$id": "#/properties/coupon/properties/currency",
+                      "type": ["string", "null"],
+                      "title": "The currency schema",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": null,
+                      "examples": [
+                        null
+                      ]
+                    },
+                    "duration": {
+                      "$id": "#/properties/coupon/properties/duration",
+                      "type": "string",
+                      "title": "The duration schema",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": "",
+                      "examples": [
+                        "once"
+                      ]
+                    },
+                    "duration_in_months": {
+                      "$id": "#/properties/coupon/properties/duration_in_months",
+                      "type": ["integer", "null"],
+                      "title": "The duration_in_months schema",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": null,
+                      "examples": [
+                        null
+                      ]
+                    },
+                    "id": {
+                      "$id": "#/properties/coupon/properties/id",
+                      "type": "string",
+                      "title": "The id schema",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": "",
+                      "examples": [
+                        "FREEMO"
+                      ]
+                    },
+                    "livemode": {
+                      "$id": "#/properties/coupon/properties/livemode",
+                      "type": "boolean",
+                      "title": "The livemode schema",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": false,
+                      "examples": [
+                        true
+                      ]
+                    },
+                    "max_redemptions": {
+                      "$id": "#/properties/coupon/properties/max_redemptions",
+                      "type": "null",
+                      "title": "The max_redemptions schema",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": null,
+                      "examples": [
+                        null
+                      ]
+                    },
+                    "metadata": {
+                      "$id": "#/properties/coupon/properties/metadata",
+                      "type": ["object", "null"],
+                      "title": "The metadata schema",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": {},
+                      "examples": [
+                        {}
+                      ]
+                    },
+                    "name": {
+                      "$id": "#/properties/coupon/properties/name",
+                      "type": "string",
+                      "title": "The name schema",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": "",
+                      "examples": [
+                        "Intro Rate"
+                      ]
+                    },
+                    "object": {
+                      "$id": "#/properties/coupon/properties/object",
+                      "type": "string",
+                      "title": "The object schema",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": "",
+                      "examples": [
+                        "coupon"
+                      ]
+                    },
+                    "percent_off": {
+                      "$id": "#/properties/coupon/properties/percent_off",
+                      "type": ["number", "null"],
+                      "title": "The percent_off schema",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": 0.0,
+                      "examples": [
+                        100.0
+                      ]
+                    },
+                    "redeem_by": {
+                      "$id": "#/properties/coupon/properties/redeem_by",
+                      "type": "null",
+                      "title": "The redeem_by schema",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": null,
+                      "examples": [
+                        null
+                      ]
+                    },
+                    "times_redeemed": {
+                      "$id": "#/properties/coupon/properties/times_redeemed",
+                      "type": "integer",
+                      "title": "The times_redeemed schema",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": 0,
+                      "examples": [
+                        57321
+                      ]
+                    },
+                    "valid": {
+                      "$id": "#/properties/coupon/properties/valid",
+                      "type": "boolean",
+                      "title": "The valid schema",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": false,
+                      "examples": [
+                        true
+                      ]
+                    }
+                  },
+                  "additionalProperties": true
+                },
+                "customer": {
+                  "$id": "#/properties/customer",
+                  "type": "string",
+                  "title": "The customer schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                    "cus_IOnNwaLcvW47cA"
+                  ]
+                },
+                "end": {
+                  "$id": "#/properties/end",
+                  "type": ["integer", "null"],
+                  "title": "The end schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": null,
+                  "examples": [
+                    null
+                  ]
+                },
+                "id": {
+                  "$id": "#/properties/id",
+                  "type": "string",
+                  "title": "The id schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                    "di_1Hnzn1I8OBWPiWBSj9k4aOyB"
+                  ]
+                },
+                "invoice": {
+                  "$id": "#/properties/invoice",
+                  "type": "null",
+                  "title": "The invoice schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": null,
+                  "examples": [
+                    null
+                  ]
+                },
+                "invoice_item": {
+                  "$id": "#/properties/invoice_item",
+                  "type": "null",
+                  "title": "The invoice_item schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": null,
+                  "examples": [
+                    null
+                  ]
+                },
+                "object": {
+                  "$id": "#/properties/object",
+                  "type": "string",
+                  "title": "The object schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                    "discount"
+                  ]
+                },
+                "promotion_code": {
+                  "$id": "#/properties/promotion_code",
+                  "type": "null",
+                  "title": "The promotion_code schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": null,
+                  "examples": [
+                    null
+                  ]
+                },
+                "start": {
+                  "$id": "#/properties/start",
+                  "type": "integer",
+                  "title": "The start schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": 0,
+                  "examples": [
+                    1605502687
+                  ]
+                },
+                "subscription": {
+                  "$id": "#/properties/subscription",
+                  "type": "string",
+                  "title": "The subscription schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                    "sub_IOnN4fNVNbrjqn"
+                  ]
+                }
+              },
+              "additionalProperties": true
             },
             "ended_at": {
               "$id": "#/properties/data/properties/object/properties/ended_at",
@@ -807,9 +1068,6 @@
                 {
                   "consume_applied_balance_on_void": true
                 }
-              ],
-              "required": [
-                "consume_applied_balance_on_void"
               ],
               "properties": {
                 "consume_applied_balance_on_void": {
@@ -905,13 +1163,6 @@
                   "total_count": 1,
                   "url": "/v1/subscription_items?subscription=sub_I4BztetoIvArau"
                 }
-              ],
-              "required": [
-                "object",
-                "data",
-                "has_more",
-                "total_count",
-                "url"
               ],
               "properties": {
                 "object": {
@@ -1073,18 +1324,6 @@
                         "tax_rates": []
                       }
                     ],
-                    "required": [
-                      "id",
-                      "object",
-                      "billing_thresholds",
-                      "created",
-                      "metadata",
-                      "plan",
-                      "price",
-                      "quantity",
-                      "subscription",
-                      "tax_rates"
-                    ],
                     "properties": {
                       "id": {
                         "$id": "#/properties/data/properties/object/properties/items/properties/data/items/anyOf/0/properties/id",
@@ -1128,10 +1367,10 @@
                       },
                       "metadata": {
                         "$id": "#/properties/data/properties/object/properties/items/properties/data/items/anyOf/0/properties/metadata",
-                        "type": "null",
+                        "type": "object",
                         "title": "The metadata schema",
                         "description": "An explanation about the purpose of this instance.",
-                        "default": null,
+                        "default": {},
                         "examples": [
                           null
                         ]
@@ -1169,28 +1408,6 @@
                             "trial_period_days": 30,
                             "usage_type": "licensed"
                           }
-                        ],
-                        "required": [
-                          "id",
-                          "object",
-                          "active",
-                          "aggregate_usage",
-                          "amount",
-                          "amount_decimal",
-                          "billing_scheme",
-                          "created",
-                          "currency",
-                          "interval",
-                          "interval_count",
-                          "livemode",
-                          "metadata",
-                          "nickname",
-                          "product",
-                          "tiers",
-                          "tiers_mode",
-                          "transform_usage",
-                          "trial_period_days",
-                          "usage_type"
                         ],
                         "properties": {
                           "id": {
@@ -1325,11 +1542,6 @@
                                 "pcdTerm": "028",
                                 "pcdAccountType": "digital"
                               }
-                            ],
-                            "required": [
-                              "pcdID",
-                              "pcdTerm",
-                              "pcdAccountType"
                             ],
                             "properties": {
                               "pcdID": {
@@ -1475,25 +1687,6 @@
                             "unit_amount_decimal": "600"
                           }
                         ],
-                        "required": [
-                          "id",
-                          "object",
-                          "active",
-                          "billing_scheme",
-                          "created",
-                          "currency",
-                          "livemode",
-                          "lookup_key",
-                          "metadata",
-                          "nickname",
-                          "product",
-                          "recurring",
-                          "tiers_mode",
-                          "transform_quantity",
-                          "type",
-                          "unit_amount",
-                          "unit_amount_decimal"
-                        ],
                         "properties": {
                           "id": {
                             "$id": "#/properties/data/properties/object/properties/items/properties/data/items/anyOf/0/properties/price/properties/id",
@@ -1588,11 +1781,6 @@
                                 "pcdAccountType": "digital"
                               }
                             ],
-                            "required": [
-                              "pcdID",
-                              "pcdTerm",
-                              "pcdAccountType"
-                            ],
                             "properties": {
                               "pcdID": {
                                 "$id": "#/properties/data/properties/object/properties/items/properties/data/items/anyOf/0/properties/price/properties/metadata/properties/pcdID",
@@ -1661,13 +1849,6 @@
                                 "trial_period_days": 30,
                                 "usage_type": "licensed"
                               }
-                            ],
-                            "required": [
-                              "aggregate_usage",
-                              "interval",
-                              "interval_count",
-                              "trial_period_days",
-                              "usage_type"
                             ],
                             "properties": {
                               "aggregate_usage": {
@@ -1888,7 +2069,6 @@
                   "utm_campaign": "cliff"
                 }
               ],
-              "required": [],
               "properties": {
                 "description": {
                   "$id": "#/properties/data/properties/object/properties/metadata/properties/description",
@@ -2054,8 +2234,280 @@
               ]
             },
             "plan": {
-              "$ref": "shared/plan.schema.json#/"
-            },
+              "$id": "plan.schema.json",
+              "type": "object",
+              "title": "The root schema",
+              "description": "The root schema comprises the entire JSON document.",
+              "default": {},
+              "examples": [
+                {
+                  "id": "price_1H4TNMI8OBWPiWBSpg8Ltsob",
+                  "object": "plan",
+                  "active": true,
+                  "aggregate_usage": null,
+                  "amount": 600,
+                  "amount_decimal": "600",
+                  "billing_scheme": "per_unit",
+                  "created": 1594653328,
+                  "currency": "usd",
+                  "interval": "month",
+                  "interval_count": 1,
+                  "livemode": true,
+                  "metadata": {
+                    "pcdID": "9**NCA",
+                    "pcdTerm": "028",
+                    "pcdAccountType": "digital"
+                  },
+                  "nickname": "Digital - $6/mo + 30 Day FT",
+                  "product": "prod_DpnjkhKP4mSdS0",
+                  "tiers": null,
+                  "tiers_mode": null,
+                  "transform_usage": null,
+                  "trial_period_days": 30,
+                  "usage_type": "licensed"
+                }
+              ],
+              "properties": {
+                "id": {
+                  "$id": "#/properties/data/properties/object/properties/plan/properties/id",
+                  "type": "string",
+                  "title": "The id schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                    "price_1H4TNMI8OBWPiWBSpg8Ltsob"
+                  ]
+                },
+                "object": {
+                  "$id": "#/properties/data/properties/object/properties/plan/properties/object",
+                  "type": "string",
+                  "title": "The object schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                    "plan"
+                  ]
+                },
+                "active": {
+                  "$id": "#/properties/data/properties/object/properties/plan/properties/active",
+                  "type": "boolean",
+                  "title": "The active schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": false,
+                  "examples": [
+                    true
+                  ]
+                },
+                "aggregate_usage": {
+                  "$id": "#/properties/data/properties/object/properties/plan/properties/aggregate_usage",
+                  "type": "null",
+                  "title": "The aggregate_usage schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": null,
+                  "examples": [
+                    null
+                  ]
+                },
+                "amount": {
+                  "$id": "#/properties/data/properties/object/properties/plan/properties/amount",
+                  "type": "integer",
+                  "title": "The amount schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": 0,
+                  "examples": [
+                    600
+                  ]
+                },
+                "amount_decimal": {
+                  "$id": "#/properties/data/properties/object/properties/plan/properties/amount_decimal",
+                  "type": "string",
+                  "title": "The amount_decimal schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                    "600"
+                  ]
+                },
+                "billing_scheme": {
+                  "$id": "#/properties/data/properties/object/properties/plan/properties/billing_scheme",
+                  "type": "string",
+                  "title": "The billing_scheme schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                    "per_unit"
+                  ]
+                },
+                "created": {
+                  "$id": "#/properties/data/properties/object/properties/plan/properties/created",
+                  "type": "integer",
+                  "title": "The created schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": 0,
+                  "examples": [
+                    1594653328
+                  ]
+                },
+                "currency": {
+                  "$id": "#/properties/data/properties/object/properties/plan/properties/currency",
+                  "type": "string",
+                  "title": "The currency schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                    "usd"
+                  ]
+                },
+                "interval": {
+                  "$id": "#/properties/data/properties/object/properties/plan/properties/interval",
+                  "type": "string",
+                  "title": "The interval schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                    "month"
+                  ]
+                },
+                "interval_count": {
+                  "$id": "#/properties/data/properties/object/properties/plan/properties/interval_count",
+                  "type": "integer",
+                  "title": "The interval_count schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": 0,
+                  "examples": [
+                    1
+                  ]
+                },
+                "livemode": {
+                  "$id": "#/properties/data/properties/object/properties/plan/properties/livemode",
+                  "type": "boolean",
+                  "title": "The livemode schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": false,
+                  "examples": [
+                    true
+                  ]
+                },
+                "metadata": {
+                  "$id": "#/properties/data/properties/object/properties/plan/properties/metadata",
+                  "type": ["object", "null"],
+                  "title": "The metadata schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": {},
+                  "examples": [
+                    {
+                      "pcdID": "9**NCA",
+                      "pcdTerm": "028",
+                      "pcdAccountType": "digital"
+                    }
+                  ],
+                  "properties": {
+                    "pcdID": {
+                      "$id": "#/properties/data/properties/object/properties/plan/properties/metadata/properties/pcdID",
+                      "type": "string",
+                      "title": "The pcdID schema",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": "",
+                      "examples": [
+                        "9**NCA"
+                      ]
+                    },
+                    "pcdTerm": {
+                      "$id": "#/properties/data/properties/object/properties/plan/properties/metadata/properties/pcdTerm",
+                      "type": "string",
+                      "title": "The pcdTerm schema",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": "",
+                      "examples": [
+                        "028"
+                      ]
+                    },
+                    "pcdAccountType": {
+                      "$id": "#/properties/data/properties/object/properties/plan/properties/metadata/properties/pcdAccountType",
+                      "type": "string",
+                      "title": "The pcdAccountType schema",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": "",
+                      "examples": [
+                        "digital"
+                      ]
+                    }
+                  },
+                  "additionalProperties": true
+                },
+                "nickname": {
+                  "$id": "#/properties/data/properties/object/properties/plan/properties/nickname",
+                  "type": "string",
+                  "title": "The nickname schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                    "Digital - $6/mo + 30 Day FT"
+                  ]
+                },
+                "product": {
+                  "$id": "#/properties/data/properties/object/properties/plan/properties/product",
+                  "type": "string",
+                  "title": "The product schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                    "prod_DpnjkhKP4mSdS0"
+                  ]
+                },
+                "tiers": {
+                  "$id": "#/properties/data/properties/object/properties/plan/properties/tiers",
+                  "type": "null",
+                  "title": "The tiers schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": null,
+                  "examples": [
+                    null
+                  ]
+                },
+                "tiers_mode": {
+                  "$id": "#/properties/data/properties/object/properties/plan/properties/tiers_mode",
+                  "type": "null",
+                  "title": "The tiers_mode schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": null,
+                  "examples": [
+                    null
+                  ]
+                },
+                "transform_usage": {
+                  "$id": "#/properties/data/properties/object/properties/plan/properties/transform_usage",
+                  "type": "null",
+                  "title": "The transform_usage schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": null,
+                  "examples": [
+                    null
+                  ]
+                },
+                "trial_period_days": {
+                  "$id": "#/properties/data/properties/object/properties/plan/properties/trial_period_days",
+                  "type": ["integer", "null"],
+                  "title": "The trial_period_days schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": 0,
+                  "examples": [
+                    30
+                  ]
+                },
+                "usage_type": {
+                  "$id": "#/properties/data/properties/object/properties/plan/properties/usage_type",
+                  "type": "string",
+                  "title": "The usage_type schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                    "licensed"
+                  ]
+                }
+              },
+              "additionalProperties": true
+},
             "quantity": {
               "$id": "#/properties/data/properties/object/properties/quantity",
               "type": "integer",
@@ -2068,12 +2520,12 @@
             },
             "schedule": {
               "$id": "#/properties/data/properties/object/properties/schedule",
-              "type": "null",
+              "type": ["string", "null"],
               "title": "The schedule schema",
               "description": "An explanation about the purpose of this instance.",
-              "default": null,
+              "default": "",
               "examples": [
-                null
+                "sub_sched_1INMGTI8OBWPiWBSqgFFL6Yv"
               ]
             },
             "start": {
@@ -2151,13 +2603,10 @@
         },
         "previous_attributes": {
           "$id": "#/properties/data/properties/previous_attributes",
-          "type": "string",
+          "type": ["object", "null"],
           "title": "The previous_attributes schema",
           "description": "An explanation about the purpose of this instance.",
-          "default": "",
-          "examples": [
-            "{\"current_period_end\": 1608613189, \"current_period_start\": 1606021189, \"latest_invoice\": \"in_1HqAgJI8OBWPiWBSYsJFN10N\"}"
-          ]
+          "default": {}
         }
       },
       "additionalProperties": true
@@ -2193,10 +2642,6 @@
           "id": null,
           "idempotency_key": null
         }
-      ],
-      "required": [
-        "id",
-        "idempotency_key"
       ],
       "properties": {
         "id": {
