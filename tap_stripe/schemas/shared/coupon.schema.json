@@ -1,0 +1,197 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "coupon.schema.json",
+    "type": ["object", "null"],
+    "title": "The root schema",
+    "description": "An explanation about the purpose of this instance.",
+    "default": {},
+    "examples": [
+        {
+            "amount_off": null,
+            "created": 1594679248,
+            "currency": null,
+            "duration": "once",
+            "duration_in_months": null,
+            "id": "FREEMO",
+            "livemode": true,
+            "max_redemptions": null,
+            "metadata": null,
+            "name": "Intro Rate",
+            "object": "coupon",
+            "percent_off": 100.0,
+            "redeem_by": null,
+            "times_redeemed": 57321,
+            "valid": true
+        }
+    ],
+    "required": [
+        "amount_off",
+        "created",
+        "currency",
+        "duration",
+        "duration_in_months",
+        "id",
+        "livemode",
+        "max_redemptions",
+        "metadata",
+        "name",
+        "object",
+        "percent_off",
+        "redeem_by",
+        "times_redeemed",
+        "valid"
+    ],
+    "properties": {
+        "amount_off": {
+            "$id": "#/properties/coupon/properties/amount_off",
+            "type": ["integer", "null"],
+            "title": "The amount_off schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": null,
+            "examples": [
+                null
+            ]
+        },
+        "created": {
+            "$id": "#/properties/coupon/properties/created",
+            "type": "integer",
+            "title": "The created schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+                1594679248
+            ]
+        },
+        "currency": {
+            "$id": "#/properties/coupon/properties/currency",
+            "type": ["string", "null"],
+            "title": "The currency schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": null,
+            "examples": [
+                null
+            ]
+        },
+        "duration": {
+            "$id": "#/properties/coupon/properties/duration",
+            "type": "string",
+            "title": "The duration schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "once"
+            ]
+        },
+        "duration_in_months": {
+            "$id": "#/properties/coupon/properties/duration_in_months",
+            "type": ["integer", "null"],
+            "title": "The duration_in_months schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": null,
+            "examples": [
+                null
+            ]
+        },
+        "id": {
+            "$id": "#/properties/coupon/properties/id",
+            "type": "string",
+            "title": "The id schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "FREEMO"
+            ]
+        },
+        "livemode": {
+            "$id": "#/properties/coupon/properties/livemode",
+            "type": "boolean",
+            "title": "The livemode schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false,
+            "examples": [
+                true
+            ]
+        },
+        "max_redemptions": {
+            "$id": "#/properties/coupon/properties/max_redemptions",
+            "type": "null",
+            "title": "The max_redemptions schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": null,
+            "examples": [
+                null
+            ]
+        },
+        "metadata": {
+            "$id": "#/properties/coupon/properties/metadata",
+            "type": "null",
+            "title": "The metadata schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": null,
+            "examples": [
+                null
+            ]
+        },
+        "name": {
+            "$id": "#/properties/coupon/properties/name",
+            "type": "string",
+            "title": "The name schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "Intro Rate"
+            ]
+        },
+        "object": {
+            "$id": "#/properties/coupon/properties/object",
+            "type": "string",
+            "title": "The object schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "coupon"
+            ]
+        },
+        "percent_off": {
+            "$id": "#/properties/coupon/properties/percent_off",
+            "type": ["number", "null"],
+            "title": "The percent_off schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0.0,
+            "examples": [
+                100.0
+            ]
+        },
+        "redeem_by": {
+            "$id": "#/properties/coupon/properties/redeem_by",
+            "type": "null",
+            "title": "The redeem_by schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": null,
+            "examples": [
+                null
+            ]
+        },
+        "times_redeemed": {
+            "$id": "#/properties/coupon/properties/times_redeemed",
+            "type": "integer",
+            "title": "The times_redeemed schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+                57321
+            ]
+        },
+        "valid": {
+            "$id": "#/properties/coupon/properties/valid",
+            "type": "boolean",
+            "title": "The valid schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false,
+            "examples": [
+                true
+            ]
+        }
+    },
+    "additionalProperties": true
+}

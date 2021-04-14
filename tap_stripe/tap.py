@@ -19,17 +19,13 @@ from singer_sdk.typing import (
 # TODO: Import your custom stream types here:
 from tap_stripe.streams import (
     StripeStream,
-
-    UsersStream,
-    GroupsStream,
-
+    SubscriptionsStream,
 )
 
 # TODO: Compile a list of custom stream types here
 #       OR rewrite discover_streams() below with your custom logic.
 STREAM_TYPES = [
-    UsersStream,
-    GroupsStream,
+    SubscriptionsStream,
 ]
 
 
@@ -41,8 +37,8 @@ class TapStripe(Tap):
     # TODO: Accept JSONSchemas for metadata
     config_jsonschema = PropertiesList(
         Property("api_key", StringType, required=True),
-        Property("account_id", StringType, required=True),
-        Property("start_date", DateTimeType),
+        Property("start_date", DateTimeType, required=True),
+        Property("account_id", StringType),
     ).to_dict()
 
     def discover_streams(self) -> List[Stream]:

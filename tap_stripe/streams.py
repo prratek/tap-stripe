@@ -8,7 +8,6 @@ from singer_sdk.streams import Stream
 from singer_sdk.streams.core import (
     REPLICATION_FULL_TABLE,
     REPLICATION_INCREMENTAL,
-    REPLICATION_LOG_BASED
 )
 
 
@@ -93,4 +92,4 @@ class SubscriptionsStream(StripeStream):
     name = "subscriptions"
     primary_keys = ["id"]
     replication_key = "created"
-    schema_filepath = SCHEMAS_DIR / "subscriptions.json"
+    schema_filepath = SCHEMAS_DIR / "subscriptions.schema.json"
