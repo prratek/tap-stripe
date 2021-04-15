@@ -31,6 +31,7 @@ SDK_OBJECTS = {
 }
 
 EVENT_TYPE_FILTERS = {
+    "plans": "plan.*",
     "subscriptions": "customer.subscription.*"
 }
 
@@ -84,6 +85,15 @@ class StripeStream(Stream):
 
         for row in iterator.auto_paging_iter():
             yield row.to_dict()
+
+
+class PlansStream(StripeStream):
+    """Stripe Plans stream"""
+
+    name = "plans"
+    primary_keys = ["id"]
+    replication_key = "created"
+    schema_filepath = SCHEMAS_DIR / "shared/plans.schema.json"
 
 
 class SubscriptionsStream(StripeStream):
