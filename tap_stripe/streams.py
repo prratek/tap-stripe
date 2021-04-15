@@ -38,6 +38,10 @@ EVENT_TYPE_FILTERS = {
 class StripeStream(Stream):
     """Stream class for Stripe streams."""
 
+    @property
+    def sdk_object(self):
+        return stripe.Event if self.replication_method == REPLICATION_INCREMENTAL else SDK_OBJECTS[self.name]
+
     def _make_created_filter(self):
         return {"gte": self.get_starting_timestamp(partition=None)}
 
@@ -64,12 +68,8 @@ class StripeStream(Stream):
             raise ValueError
 
     def _get_iterator(self, limit=100) -> stripe.api_resources.list_object.ListObject:
-
-        # TODO: Refactor sdk_object into class property
-        sdk_object = stripe.Event if self.replication_method == REPLICATION_INCREMENTAL else SDK_OBJECTS[self.name]
         params = self._make_params(limit=limit)
-
-        return sdk_object.list(**params)
+        return self.sdk_object.list(**params)
 
     def get_records(self, partition: Optional[dict] = None) -> Iterable[dict]:
         """Return a generator of row-type dictionary objects.
