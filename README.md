@@ -1,8 +1,6 @@
 # tap-stripe
 
-`tap-stripe` is a Singer tap for Stripe.
-
-Build with the [Singer SDK](https://gitlab.com/meltano/singer-sdk).
+`tap-stripe` is a Singer tap for Stripe built with the [Singer SDK](https://gitlab.com/meltano/singer-sdk).
 
 ## Installation
 
