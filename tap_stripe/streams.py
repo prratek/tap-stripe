@@ -27,6 +27,17 @@ SDK_OBJECTS = {
 }
 
 EVENT_TYPE_FILTERS = {
+    "charges": {
+        "types": [
+            "charge.captured",
+            "charge.expired",
+            "charge.failed",
+            "charge.pending",
+            "charge.refunded",
+            "charge.succeeded",
+            "charge.updated",
+        ]
+    },
     "customers": {
         "types": ["customer.created", "customer.deleted", "customer.updated"]
     },
@@ -86,6 +97,15 @@ class StripeStream(Stream):
 
         for row in iterator.auto_paging_iter():
             yield row.to_dict()
+
+
+class ChargesStream(StripeStream):
+    """Stripe Plans stream"""
+
+    name = "charges"
+    primary_keys = ["id"]
+    replication_key = "created"
+    schema_filepath = SCHEMAS_DIR / "charges.schema.json"
 
 
 class CustomersStream(StripeStream):
