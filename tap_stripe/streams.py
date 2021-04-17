@@ -1,15 +1,11 @@
 """Stream class for tap-stripe."""
 
 from pathlib import Path
-from typing import Optional, Iterable
+from typing import Iterable, Optional
 
 import stripe
 from singer_sdk.streams import Stream
-from singer_sdk.streams.core import (
-    REPLICATION_FULL_TABLE,
-    REPLICATION_INCREMENTAL,
-)
-
+from singer_sdk.streams.core import REPLICATION_FULL_TABLE, REPLICATION_INCREMENTAL
 
 SCHEMAS_DIR = Path(__file__).parent / Path("./schemas")
 

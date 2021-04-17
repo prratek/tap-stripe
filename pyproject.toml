@@ -14,10 +14,15 @@ stripe = "^2.56.0"
 pytest = "^6.1.2"
 black = {version = "^20.8b1", allow-prereleases = true}
 pre-commit = "^2.12.1"
+isort = "^5.8.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
 
 [tool.poetry.scripts]
 # CLI declaration
