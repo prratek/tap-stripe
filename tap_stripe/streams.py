@@ -27,13 +27,15 @@ SDK_OBJECTS = {
     "promotion_codes": stripe.PromotionCode,
     "refunds": stripe.Refund,
     "subscriptions": stripe.Subscription,
-    "subscription_schedules": stripe.SubscriptionSchedule
+    "subscription_schedules": stripe.SubscriptionSchedule,
 }
 
 EVENT_TYPE_FILTERS = {
-    "customers": {"types": ["customer.created", "customer.deleted", "customer.updated"]},
+    "customers": {
+        "types": ["customer.created", "customer.deleted", "customer.updated"]
+    },
     "plans": {"type": "plan.*"},
-    "subscriptions": {"type": "customer.subscription.*"}
+    "subscriptions": {"type": "customer.subscription.*"},
 }
 
 
@@ -42,7 +44,11 @@ class StripeStream(Stream):
 
     @property
     def sdk_object(self):
-        return stripe.Event if self.replication_method == REPLICATION_INCREMENTAL else SDK_OBJECTS[self.name]
+        return (
+            stripe.Event
+            if self.replication_method == REPLICATION_INCREMENTAL
+            else SDK_OBJECTS[self.name]
+        )
 
     def _make_created_filter(self):
         return {"gte": self.get_starting_timestamp(partition=None)}
@@ -50,10 +56,7 @@ class StripeStream(Stream):
     def _make_params(self, limit=100) -> dict:
         if self.replication_method == REPLICATION_INCREMENTAL:
             type_filter = EVENT_TYPE_FILTERS[self.name]
-            other_filters = {
-                "created": self._make_created_filter(),
-                "limit": limit
-            }
+            other_filters = {"created": self._make_created_filter(), "limit": limit}
             return {**type_filter, **other_filters}
 
         elif self.replication_method == REPLICATION_FULL_TABLE:
@@ -61,13 +64,10 @@ class StripeStream(Stream):
                 return {
                     "created": self._make_created_filter(),
                     "limit": limit,
-                    "status": "all"
+                    "status": "all",
                 }
             else:
-                return {
-                    "created": self._make_created_filter(),
-                    "limit": limit
-                }
+                return {"created": self._make_created_filter(), "limit": limit}
 
         else:
             raise ValueError
