@@ -19,12 +19,16 @@ from singer_sdk.typing import (
 # TODO: Import your custom stream types here:
 from tap_stripe.streams import (
     StripeStream,
+    CustomersStream,
+    PlansStream,
     SubscriptionsStream,
 )
 
 # TODO: Compile a list of custom stream types here
 #       OR rewrite discover_streams() below with your custom logic.
 STREAM_TYPES = [
+    CustomersStream,
+    PlansStream,
     SubscriptionsStream,
 ]
 

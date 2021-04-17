@@ -31,8 +31,9 @@ SDK_OBJECTS = {
 }
 
 EVENT_TYPE_FILTERS = {
-    "plans": "plan.*",
-    "subscriptions": "customer.subscription.*"
+    "customers": {"types": ["customer.created", "customer.deleted", "customer.updated"]},
+    "plans": {"type": "plan.*"},
+    "subscriptions": {"type": "customer.subscription.*"}
 }
 
 
@@ -48,11 +49,13 @@ class StripeStream(Stream):
 
     def _make_params(self, limit=100) -> dict:
         if self.replication_method == REPLICATION_INCREMENTAL:
-            return {
-                "type": EVENT_TYPE_FILTERS[self.name],
+            type_filter = EVENT_TYPE_FILTERS[self.name]
+            other_filters = {
                 "created": self._make_created_filter(),
                 "limit": limit
             }
+            return {**type_filter, **other_filters}
+
         elif self.replication_method == REPLICATION_FULL_TABLE:
             if self.name == "subscriptions":
                 return {
@@ -65,6 +68,7 @@ class StripeStream(Stream):
                     "created": self._make_created_filter(),
                     "limit": limit
                 }
+
         else:
             raise ValueError
 
@@ -85,6 +89,15 @@ class StripeStream(Stream):
 
         for row in iterator.auto_paging_iter():
             yield row.to_dict()
+
+
+class CustomersStream(StripeStream):
+    """Stripe Plans stream"""
+
+    name = "customers"
+    primary_keys = ["id"]
+    replication_key = "created"
+    schema_filepath = SCHEMAS_DIR / "customers.schema.json"
 
 
 class PlansStream(StripeStream):

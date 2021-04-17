@@ -1,0 +1,1844 @@
+{
+  "type": [
+    "null",
+    "object"
+  ],
+  "properties": {
+    "id": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "object": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "api_version": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "created": {
+      "type": [
+        "null",
+        "integer"
+      ]
+    },
+    "data": {
+      "type": [
+        "null",
+        "object"
+      ],
+      "properties": {
+        "object": {
+          "type": [
+            "null",
+            "object"
+          ],
+          "properties": {
+            "id": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "object": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "account_balance": {
+              "type": [
+                "null",
+                "integer"
+              ]
+            },
+            "address": {
+              "type": [
+                "null",
+                "object"
+              ],
+              "properties": {
+                "city": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "country": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "line1": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "line2": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "postal_code": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "state": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                }
+              }
+            },
+            "balance": {
+              "type": [
+                "null",
+                "integer"
+              ]
+            },
+            "created": {
+              "type": [
+                "null",
+                "integer"
+              ]
+            },
+            "currency": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "default_source": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "delinquent": {
+              "type": [
+                "null",
+                "boolean"
+              ]
+            },
+            "description": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "discount": {
+              "type": [
+                "null"
+              ]
+            },
+            "email": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "invoice_prefix": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "invoice_settings": {
+              "type": [
+                "null",
+                "object"
+              ],
+              "properties": {
+                "custom_fields": {
+                  "type": [
+                    "null"
+                  ]
+                },
+                "default_payment_method": {
+                  "type": [
+                    "null"
+                  ]
+                },
+                "footer": {
+                  "type": [
+                    "null"
+                  ]
+                }
+              }
+            },
+            "livemode": {
+              "type": [
+                "null",
+                "boolean"
+              ]
+            },
+            "metadata": {
+              "type": [
+                "null",
+                "object"
+              ],
+              "properties": {
+                "first_name": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "last_name": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "pcdAccount": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "cd60": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "page_uri": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "itm_campaign": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "itm_medium": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "itm_source": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "utm_campaign": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "utm_medium": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "utm_source": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "giveaway_dept": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "giveaway_source": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "event_id": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "event_name": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "event_attendee_id": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                }
+              }
+            },
+            "name": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "next_invoice_sequence": {
+              "type": [
+                "null",
+                "integer"
+              ]
+            },
+            "phone": {
+              "type": [
+                "null"
+              ]
+            },
+            "shipping": {
+              "type": [
+                "null"
+              ]
+            },
+            "sources": {
+              "type": [
+                "null",
+                "object"
+              ],
+              "properties": {
+                "object": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "data": {
+                  "type": [
+                    "null",
+                    "array"
+                  ],
+                  "items": {
+                    "type": [
+                      "null",
+                      "object"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": [
+                          "null",
+                          "string"
+                        ]
+                      },
+                      "object": {
+                        "type": [
+                          "null",
+                          "string"
+                        ]
+                      },
+                      "address_city": {
+                        "type": [
+                          "null",
+                          "string"
+                        ]
+                      },
+                      "address_country": {
+                        "type": [
+                          "null",
+                          "string"
+                        ]
+                      },
+                      "address_line1": {
+                        "type": [
+                          "null",
+                          "string"
+                        ]
+                      },
+                      "address_line1_check": {
+                        "type": [
+                          "null",
+                          "string"
+                        ]
+                      },
+                      "address_line2": {
+                        "type": [
+                          "null",
+                          "string"
+                        ]
+                      },
+                      "address_state": {
+                        "type": [
+                          "null",
+                          "string"
+                        ]
+                      },
+                      "address_zip": {
+                        "type": [
+                          "null",
+                          "string"
+                        ]
+                      },
+                      "address_zip_check": {
+                        "type": [
+                          "null",
+                          "string"
+                        ]
+                      },
+                      "brand": {
+                        "type": [
+                          "null",
+                          "string"
+                        ]
+                      },
+                      "country": {
+                        "type": [
+                          "null",
+                          "string"
+                        ]
+                      },
+                      "customer": {
+                        "type": [
+                          "null",
+                          "string"
+                        ]
+                      },
+                      "cvc_check": {
+                        "type": [
+                          "null",
+                          "string"
+                        ]
+                      },
+                      "dynamic_last4": {
+                        "type": [
+                          "null",
+                          "string"
+                        ]
+                      },
+                      "exp_month": {
+                        "type": [
+                          "null",
+                          "integer"
+                        ]
+                      },
+                      "exp_year": {
+                        "type": [
+                          "null",
+                          "integer"
+                        ]
+                      },
+                      "fingerprint": {
+                        "type": [
+                          "null",
+                          "string"
+                        ]
+                      },
+                      "funding": {
+                        "type": [
+                          "null",
+                          "string"
+                        ]
+                      },
+                      "last4": {
+                        "type": [
+                          "null",
+                          "string"
+                        ]
+                      },
+                      "name": {
+                        "type": [
+                          "null",
+                          "string"
+                        ]
+                      },
+                      "tokenization_method": {
+                        "type": [
+                          "null",
+                          "string"
+                        ]
+                      }
+                    }
+                  }
+                },
+                "has_more": {
+                  "type": [
+                    "null",
+                    "boolean"
+                  ]
+                },
+                "total_count": {
+                  "type": [
+                    "null",
+                    "integer"
+                  ]
+                },
+                "url": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                }
+              }
+            },
+            "subscriptions": {
+              "type": [
+                "null",
+                "object"
+              ],
+              "properties": {
+                "object": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "data": {
+                  "type": [
+                    "null",
+                    "array"
+                  ],
+                  "items": {
+                    "type": [
+                      "null",
+                      "object"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": [
+                          "null",
+                          "string"
+                        ]
+                      },
+                      "object": {
+                        "type": [
+                          "null",
+                          "string"
+                        ]
+                      },
+                      "application_fee_percent": {
+                        "type": [
+                          "null"
+                        ]
+                      },
+                      "billing": {
+                        "type": [
+                          "null",
+                          "string"
+                        ]
+                      },
+                      "billing_cycle_anchor": {
+                        "type": [
+                          "null",
+                          "integer"
+                        ]
+                      },
+                      "billing_thresholds": {
+                        "type": [
+                          "null"
+                        ]
+                      },
+                      "cancel_at": {
+                        "type": [
+                          "null",
+                          "integer"
+                        ]
+                      },
+                      "cancel_at_period_end": {
+                        "type": [
+                          "null",
+                          "boolean"
+                        ]
+                      },
+                      "canceled_at": {
+                        "type": [
+                          "null",
+                          "integer"
+                        ]
+                      },
+                      "collection_method": {
+                        "type": [
+                          "null",
+                          "string"
+                        ]
+                      },
+                      "created": {
+                        "type": [
+                          "null",
+                          "integer"
+                        ]
+                      },
+                      "current_period_end": {
+                        "type": [
+                          "null",
+                          "integer"
+                        ]
+                      },
+                      "current_period_start": {
+                        "type": [
+                          "null",
+                          "integer"
+                        ]
+                      },
+                      "customer": {
+                        "type": [
+                          "null",
+                          "string"
+                        ]
+                      },
+                      "days_until_due": {
+                        "type": [
+                          "null"
+                        ]
+                      },
+                      "default_payment_method": {
+                        "type": [
+                          "null"
+                        ]
+                      },
+                      "default_source": {
+                        "type": [
+                          "null"
+                        ]
+                      },
+                      "discount": {
+                        "type": [
+                          "null",
+                          "object"
+                        ],
+                        "properties": {
+                          "id": {
+                            "type": [
+                              "null",
+                              "string"
+                            ]
+                          },
+                          "object": {
+                            "type": [
+                              "null",
+                              "string"
+                            ]
+                          },
+                          "checkout_session": {
+                            "type": [
+                              "null"
+                            ]
+                          },
+                          "coupon": {
+                            "type": [
+                              "null",
+                              "object"
+                            ],
+                            "properties": {
+                              "id": {
+                                "type": [
+                                  "null",
+                                  "string"
+                                ]
+                              },
+                              "object": {
+                                "type": [
+                                  "null",
+                                  "string"
+                                ]
+                              },
+                              "amount_off": {
+                                "type": [
+                                  "null",
+                                  "integer"
+                                ]
+                              },
+                              "created": {
+                                "type": [
+                                  "null",
+                                  "integer"
+                                ]
+                              },
+                              "currency": {
+                                "type": [
+                                  "null",
+                                  "string"
+                                ]
+                              },
+                              "duration": {
+                                "type": [
+                                  "null",
+                                  "string"
+                                ]
+                              },
+                              "duration_in_months": {
+                                "type": [
+                                  "null",
+                                  "integer"
+                                ]
+                              },
+                              "livemode": {
+                                "type": [
+                                  "null",
+                                  "boolean"
+                                ]
+                              },
+                              "max_redemptions": {
+                                "type": [
+                                  "null"
+                                ]
+                              },
+                              "name": {
+                                "type": [
+                                  "null",
+                                  "string"
+                                ]
+                              },
+                              "percent_off": {
+                                "type": [
+                                  "null",
+                                  "number"
+                                ]
+                              },
+                              "redeem_by": {
+                                "type": [
+                                  "null"
+                                ]
+                              },
+                              "times_redeemed": {
+                                "type": [
+                                  "null",
+                                  "integer"
+                                ]
+                              },
+                              "valid": {
+                                "type": [
+                                  "null",
+                                  "boolean"
+                                ]
+                              }
+                            }
+                          },
+                          "customer": {
+                            "type": [
+                              "null",
+                              "string"
+                            ]
+                          },
+                          "end": {
+                            "type": [
+                              "null",
+                              "integer"
+                            ]
+                          },
+                          "invoice": {
+                            "type": [
+                              "null"
+                            ]
+                          },
+                          "invoice_item": {
+                            "type": [
+                              "null"
+                            ]
+                          },
+                          "promotion_code": {
+                            "type": [
+                              "null"
+                            ]
+                          },
+                          "start": {
+                            "type": [
+                              "null",
+                              "integer"
+                            ]
+                          },
+                          "subscription": {
+                            "type": [
+                              "null",
+                              "string"
+                            ]
+                          }
+                        }
+                      },
+                      "ended_at": {
+                        "type": [
+                          "null"
+                        ]
+                      },
+                      "invoice_customer_balance_settings": {
+                        "type": [
+                          "null",
+                          "object"
+                        ],
+                        "properties": {
+                          "consume_applied_balance_on_void": {
+                            "type": [
+                              "null",
+                              "boolean"
+                            ]
+                          }
+                        }
+                      },
+                      "items": {
+                        "type": [
+                          "null",
+                          "object"
+                        ],
+                        "properties": {
+                          "object": {
+                            "type": [
+                              "null",
+                              "string"
+                            ]
+                          },
+                          "data": {
+                            "type": [
+                              "null",
+                              "array"
+                            ],
+                            "items": {
+                              "type": [
+                                "null",
+                                "object"
+                              ],
+                              "properties": {
+                                "id": {
+                                  "type": [
+                                    "null",
+                                    "string"
+                                  ]
+                                },
+                                "object": {
+                                  "type": [
+                                    "null",
+                                    "string"
+                                  ]
+                                },
+                                "billing_thresholds": {
+                                  "type": [
+                                    "null"
+                                  ]
+                                },
+                                "created": {
+                                  "type": [
+                                    "null",
+                                    "integer"
+                                  ]
+                                },
+                                "plan": {
+                                  "type": [
+                                    "null",
+                                    "object"
+                                  ],
+                                  "properties": {
+                                    "id": {
+                                      "type": [
+                                        "null",
+                                        "string"
+                                      ]
+                                    },
+                                    "object": {
+                                      "type": [
+                                        "null",
+                                        "string"
+                                      ]
+                                    },
+                                    "active": {
+                                      "type": [
+                                        "null",
+                                        "boolean"
+                                      ]
+                                    },
+                                    "aggregate_usage": {
+                                      "type": [
+                                        "null"
+                                      ]
+                                    },
+                                    "amount": {
+                                      "type": [
+                                        "null",
+                                        "integer"
+                                      ]
+                                    },
+                                    "amount_decimal": {
+                                      "type": [
+                                        "null",
+                                        "string"
+                                      ]
+                                    },
+                                    "billing_scheme": {
+                                      "type": [
+                                        "null",
+                                        "string"
+                                      ]
+                                    },
+                                    "created": {
+                                      "type": [
+                                        "null",
+                                        "integer"
+                                      ]
+                                    },
+                                    "currency": {
+                                      "type": [
+                                        "null",
+                                        "string"
+                                      ]
+                                    },
+                                    "interval": {
+                                      "type": [
+                                        "null",
+                                        "string"
+                                      ]
+                                    },
+                                    "interval_count": {
+                                      "type": [
+                                        "null",
+                                        "integer"
+                                      ]
+                                    },
+                                    "livemode": {
+                                      "type": [
+                                        "null",
+                                        "boolean"
+                                      ]
+                                    },
+                                    "metadata": {
+                                      "type": [
+                                        "null",
+                                        "object"
+                                      ],
+                                      "properties": {
+                                        "pcdID": {
+                                          "type": [
+                                            "null",
+                                            "string"
+                                          ]
+                                        },
+                                        "pcdTerm": {
+                                          "type": [
+                                            "null",
+                                            "string"
+                                          ]
+                                        },
+                                        "pcdAccountType": {
+                                          "type": [
+                                            "null",
+                                            "string"
+                                          ]
+                                        },
+                                        "teaser": {
+                                          "type": [
+                                            "null",
+                                            "string"
+                                          ]
+                                        }
+                                      }
+                                    },
+                                    "nickname": {
+                                      "type": [
+                                        "null",
+                                        "string"
+                                      ]
+                                    },
+                                    "product": {
+                                      "type": [
+                                        "null",
+                                        "string"
+                                      ]
+                                    },
+                                    "tiers": {
+                                      "type": [
+                                        "null"
+                                      ]
+                                    },
+                                    "tiers_mode": {
+                                      "type": [
+                                        "null"
+                                      ]
+                                    },
+                                    "transform_usage": {
+                                      "type": [
+                                        "null"
+                                      ]
+                                    },
+                                    "trial_period_days": {
+                                      "type": [
+                                        "null",
+                                        "integer"
+                                      ]
+                                    },
+                                    "usage_type": {
+                                      "type": [
+                                        "null",
+                                        "string"
+                                      ]
+                                    }
+                                  }
+                                },
+                                "price": {
+                                  "type": [
+                                    "null",
+                                    "object"
+                                  ],
+                                  "properties": {
+                                    "id": {
+                                      "type": [
+                                        "null",
+                                        "string"
+                                      ]
+                                    },
+                                    "object": {
+                                      "type": [
+                                        "null",
+                                        "string"
+                                      ]
+                                    },
+                                    "active": {
+                                      "type": [
+                                        "null",
+                                        "boolean"
+                                      ]
+                                    },
+                                    "billing_scheme": {
+                                      "type": [
+                                        "null",
+                                        "string"
+                                      ]
+                                    },
+                                    "created": {
+                                      "type": [
+                                        "null",
+                                        "integer"
+                                      ]
+                                    },
+                                    "currency": {
+                                      "type": [
+                                        "null",
+                                        "string"
+                                      ]
+                                    },
+                                    "livemode": {
+                                      "type": [
+                                        "null",
+                                        "boolean"
+                                      ]
+                                    },
+                                    "lookup_key": {
+                                      "type": [
+                                        "null"
+                                      ]
+                                    },
+                                    "metadata": {
+                                      "type": [
+                                        "null",
+                                        "object"
+                                      ],
+                                      "properties": {
+                                        "pcdID": {
+                                          "type": [
+                                            "null",
+                                            "string"
+                                          ]
+                                        },
+                                        "pcdTerm": {
+                                          "type": [
+                                            "null",
+                                            "string"
+                                          ]
+                                        },
+                                        "pcdAccountType": {
+                                          "type": [
+                                            "null",
+                                            "string"
+                                          ]
+                                        },
+                                        "teaser": {
+                                          "type": [
+                                            "null",
+                                            "string"
+                                          ]
+                                        }
+                                      }
+                                    },
+                                    "nickname": {
+                                      "type": [
+                                        "null",
+                                        "string"
+                                      ]
+                                    },
+                                    "product": {
+                                      "type": [
+                                        "null",
+                                        "string"
+                                      ]
+                                    },
+                                    "recurring": {
+                                      "type": [
+                                        "null",
+                                        "object"
+                                      ],
+                                      "properties": {
+                                        "aggregate_usage": {
+                                          "type": [
+                                            "null"
+                                          ]
+                                        },
+                                        "interval": {
+                                          "type": [
+                                            "null",
+                                            "string"
+                                          ]
+                                        },
+                                        "interval_count": {
+                                          "type": [
+                                            "null",
+                                            "integer"
+                                          ]
+                                        },
+                                        "trial_period_days": {
+                                          "type": [
+                                            "null",
+                                            "integer"
+                                          ]
+                                        },
+                                        "usage_type": {
+                                          "type": [
+                                            "null",
+                                            "string"
+                                          ]
+                                        }
+                                      }
+                                    },
+                                    "tiers_mode": {
+                                      "type": [
+                                        "null"
+                                      ]
+                                    },
+                                    "transform_quantity": {
+                                      "type": [
+                                        "null"
+                                      ]
+                                    },
+                                    "type": {
+                                      "type": [
+                                        "null",
+                                        "string"
+                                      ]
+                                    },
+                                    "unit_amount": {
+                                      "type": [
+                                        "null",
+                                        "integer"
+                                      ]
+                                    },
+                                    "unit_amount_decimal": {
+                                      "type": [
+                                        "null",
+                                        "string"
+                                      ]
+                                    }
+                                  }
+                                },
+                                "quantity": {
+                                  "type": [
+                                    "null",
+                                    "integer"
+                                  ]
+                                },
+                                "subscription": {
+                                  "type": [
+                                    "null",
+                                    "string"
+                                  ]
+                                }
+                              }
+                            }
+                          },
+                          "has_more": {
+                            "type": [
+                              "null",
+                              "boolean"
+                            ]
+                          },
+                          "total_count": {
+                            "type": [
+                              "null",
+                              "integer"
+                            ]
+                          },
+                          "url": {
+                            "type": [
+                              "null",
+                              "string"
+                            ]
+                          }
+                        }
+                      },
+                      "latest_invoice": {
+                        "type": [
+                          "null",
+                          "string"
+                        ]
+                      },
+                      "livemode": {
+                        "type": [
+                          "null",
+                          "boolean"
+                        ]
+                      },
+                      "next_pending_invoice_item_invoice": {
+                        "type": [
+                          "null"
+                        ]
+                      },
+                      "pause_collection": {
+                        "type": [
+                          "null"
+                        ]
+                      },
+                      "pending_invoice_item_interval": {
+                        "type": [
+                          "null"
+                        ]
+                      },
+                      "pending_setup_intent": {
+                        "type": [
+                          "null"
+                        ]
+                      },
+                      "pending_update": {
+                        "type": [
+                          "null"
+                        ]
+                      },
+                      "plan": {
+                        "type": [
+                          "null",
+                          "object"
+                        ],
+                        "properties": {
+                          "id": {
+                            "type": [
+                              "null",
+                              "string"
+                            ]
+                          },
+                          "object": {
+                            "type": [
+                              "null",
+                              "string"
+                            ]
+                          },
+                          "active": {
+                            "type": [
+                              "null",
+                              "boolean"
+                            ]
+                          },
+                          "aggregate_usage": {
+                            "type": [
+                              "null"
+                            ]
+                          },
+                          "amount": {
+                            "type": [
+                              "null",
+                              "integer"
+                            ]
+                          },
+                          "amount_decimal": {
+                            "type": [
+                              "null",
+                              "string"
+                            ]
+                          },
+                          "billing_scheme": {
+                            "type": [
+                              "null",
+                              "string"
+                            ]
+                          },
+                          "created": {
+                            "type": [
+                              "null",
+                              "integer"
+                            ]
+                          },
+                          "currency": {
+                            "type": [
+                              "null",
+                              "string"
+                            ]
+                          },
+                          "interval": {
+                            "type": [
+                              "null",
+                              "string"
+                            ]
+                          },
+                          "interval_count": {
+                            "type": [
+                              "null",
+                              "integer"
+                            ]
+                          },
+                          "livemode": {
+                            "type": [
+                              "null",
+                              "boolean"
+                            ]
+                          },
+                          "metadata": {
+                            "type": [
+                              "null",
+                              "object"
+                            ],
+                            "properties": {
+                              "pcdID": {
+                                "type": [
+                                  "null",
+                                  "string"
+                                ]
+                              },
+                              "pcdTerm": {
+                                "type": [
+                                  "null",
+                                  "string"
+                                ]
+                              },
+                              "pcdAccountType": {
+                                "type": [
+                                  "null",
+                                  "string"
+                                ]
+                              },
+                              "teaser": {
+                                "type": [
+                                  "null",
+                                  "string"
+                                ]
+                              }
+                            }
+                          },
+                          "nickname": {
+                            "type": [
+                              "null",
+                              "string"
+                            ]
+                          },
+                          "product": {
+                            "type": [
+                              "null",
+                              "string"
+                            ]
+                          },
+                          "tiers": {
+                            "type": [
+                              "null"
+                            ]
+                          },
+                          "tiers_mode": {
+                            "type": [
+                              "null"
+                            ]
+                          },
+                          "transform_usage": {
+                            "type": [
+                              "null"
+                            ]
+                          },
+                          "trial_period_days": {
+                            "type": [
+                              "null",
+                              "integer"
+                            ]
+                          },
+                          "usage_type": {
+                            "type": [
+                              "null",
+                              "string"
+                            ]
+                          }
+                        }
+                      },
+                      "quantity": {
+                        "type": [
+                          "null",
+                          "integer"
+                        ]
+                      },
+                      "schedule": {
+                        "type": [
+                          "null",
+                          "string"
+                        ]
+                      },
+                      "start": {
+                        "type": [
+                          "null",
+                          "integer"
+                        ]
+                      },
+                      "start_date": {
+                        "type": [
+                          "null",
+                          "integer"
+                        ]
+                      },
+                      "status": {
+                        "type": [
+                          "null",
+                          "string"
+                        ]
+                      },
+                      "tax_percent": {
+                        "type": [
+                          "null"
+                        ]
+                      },
+                      "transfer_data": {
+                        "type": [
+                          "null"
+                        ]
+                      },
+                      "trial_end": {
+                        "type": [
+                          "null",
+                          "integer"
+                        ]
+                      },
+                      "trial_start": {
+                        "type": [
+                          "null",
+                          "integer"
+                        ]
+                      },
+                      "metadata": {
+                        "type": [
+                          "null",
+                          "object"
+                        ],
+                        "properties": {
+                          "description": {
+                            "type": [
+                              "null",
+                              "string"
+                            ]
+                          },
+                          "planID": {
+                            "type": [
+                              "null",
+                              "string"
+                            ]
+                          },
+                          "pcdAccount": {
+                            "type": [
+                              "null",
+                              "string"
+                            ]
+                          },
+                          "pcdID": {
+                            "type": [
+                              "null",
+                              "string"
+                            ]
+                          },
+                          "newYorkMediaUserID": {
+                            "type": [
+                              "null",
+                              "string"
+                            ]
+                          },
+                          "cd60": {
+                            "type": [
+                              "null",
+                              "string"
+                            ]
+                          },
+                          "cd9": {
+                            "type": [
+                              "null",
+                              "string"
+                            ]
+                          },
+                          "itm_campaign": {
+                            "type": [
+                              "null",
+                              "string"
+                            ]
+                          },
+                          "itm_medium": {
+                            "type": [
+                              "null",
+                              "string"
+                            ]
+                          },
+                          "itm_source": {
+                            "type": [
+                              "null",
+                              "string"
+                            ]
+                          },
+                          "page_uri": {
+                            "type": [
+                              "null",
+                              "string"
+                            ]
+                          },
+                          "utm_campaign": {
+                            "type": [
+                              "null",
+                              "string"
+                            ]
+                          },
+                          "utm_medium": {
+                            "type": [
+                              "null",
+                              "string"
+                            ]
+                          },
+                          "utm_source": {
+                            "type": [
+                              "null",
+                              "string"
+                            ]
+                          },
+                          "premiumID": {
+                            "type": [
+                              "null",
+                              "string"
+                            ]
+                          },
+                          "merchandiseID": {
+                            "type": [
+                              "null",
+                              "string"
+                            ]
+                          },
+                          "redeemedPromoCode": {
+                            "type": [
+                              "null",
+                              "string"
+                            ]
+                          },
+                          "type": {
+                            "type": [
+                              "null",
+                              "string"
+                            ]
+                          },
+                          "first_name": {
+                            "type": [
+                              "null",
+                              "string"
+                            ]
+                          },
+                          "last_name": {
+                            "type": [
+                              "null",
+                              "string"
+                            ]
+                          },
+                          "giveaway_dept": {
+                            "type": [
+                              "null",
+                              "string"
+                            ]
+                          },
+                          "giveaway_source": {
+                            "type": [
+                              "null",
+                              "string"
+                            ]
+                          },
+                          "cancel_reason": {
+                            "type": [
+                              "null",
+                              "string"
+                            ]
+                          },
+                          "event_id": {
+                            "type": [
+                              "null",
+                              "string"
+                            ]
+                          },
+                          "event_name": {
+                            "type": [
+                              "null",
+                              "string"
+                            ]
+                          },
+                          "event_attendee_id": {
+                            "type": [
+                              "null",
+                              "string"
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "has_more": {
+                  "type": [
+                    "null",
+                    "boolean"
+                  ]
+                },
+                "total_count": {
+                  "type": [
+                    "null",
+                    "integer"
+                  ]
+                },
+                "url": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                }
+              }
+            },
+            "tax_exempt": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "tax_ids": {
+              "type": [
+                "null",
+                "object"
+              ],
+              "properties": {
+                "object": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "has_more": {
+                  "type": [
+                    "null",
+                    "boolean"
+                  ]
+                },
+                "total_count": {
+                  "type": [
+                    "null",
+                    "integer"
+                  ]
+                },
+                "url": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                }
+              }
+            },
+            "tax_info": {
+              "type": [
+                "null"
+              ]
+            },
+            "tax_info_verification": {
+              "type": [
+                "null"
+              ]
+            }
+          }
+        },
+        "previous_attributes": {
+          "type": [
+            "null",
+            "object"
+          ],
+          "properties": {
+            "metadata": {
+              "type": [
+                "null",
+                "object"
+              ],
+              "properties": {
+                "pcdAccount": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "cd60": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "page_uri": {
+                  "type": [
+                    "null"
+                  ]
+                },
+                "itm_campaign": {
+                  "type": [
+                    "null"
+                  ]
+                },
+                "itm_medium": {
+                  "type": [
+                    "null"
+                  ]
+                },
+                "itm_source": {
+                  "type": [
+                    "null"
+                  ]
+                },
+                "utm_campaign": {
+                  "type": [
+                    "null"
+                  ]
+                },
+                "utm_medium": {
+                  "type": [
+                    "null"
+                  ]
+                },
+                "utm_source": {
+                  "type": [
+                    "null"
+                  ]
+                }
+              }
+            },
+            "currency": {
+              "type": [
+                "null"
+              ]
+            },
+            "address": {
+              "type": [
+                "null",
+                "object"
+              ],
+              "properties": {
+                "line2": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "state": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "city": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "line1": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "postal_code": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "country": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                }
+              }
+            },
+            "default_source": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "delinquent": {
+              "type": [
+                "null",
+                "boolean"
+              ]
+            },
+            "description": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "email": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "account_balance": {
+              "type": [
+                "null",
+                "integer"
+              ]
+            },
+            "balance": {
+              "type": [
+                "null",
+                "integer"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "livemode": {
+      "type": [
+        "null",
+        "boolean"
+      ]
+    },
+    "pending_webhooks": {
+      "type": [
+        "null",
+        "integer"
+      ]
+    },
+    "request": {
+      "type": [
+        "null",
+        "object"
+      ],
+      "properties": {
+        "id": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "idempotency_key": {
+          "type": [
+            "null",
+            "string"
+          ]
+        }
+      }
+    },
+    "type": {
+      "type": [
+        "null",
+        "string"
+      ]
+    }
+  }
+}
