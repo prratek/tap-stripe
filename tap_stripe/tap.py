@@ -1,33 +1,25 @@
 """Stripe tap class."""
 
-from pathlib import Path
 from typing import List
 
 from singer_sdk import Tap, Stream
 from singer_sdk.typing import (
-    ArrayType,
-    BooleanType,
     DateTimeType,
-    IntegerType,
-    NumberType,
-    ObjectType,
     PropertiesList,
     Property,
     StringType,
 )
 
-# TODO: Import your custom stream types here:
 from tap_stripe.streams import (
-    StripeStream,
     CustomersStream,
+    InvoicesStream,
     PlansStream,
     SubscriptionsStream,
 )
 
-# TODO: Compile a list of custom stream types here
-#       OR rewrite discover_streams() below with your custom logic.
 STREAM_TYPES = [
     CustomersStream,
+    InvoicesStream,
     PlansStream,
     SubscriptionsStream,
 ]
