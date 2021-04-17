@@ -6,6 +6,10 @@ from typing import Iterable, Optional
 import stripe
 from singer_sdk.streams import Stream
 from singer_sdk.streams.core import REPLICATION_FULL_TABLE, REPLICATION_INCREMENTAL
+from stripe.api_resources.abstract import (
+    ListableAPIResource as StripeListableAPIResource,
+)
+from stripe.api_resources.list_object import ListObject as StripeListObject
 
 SCHEMAS_DIR = Path(__file__).parent / Path("./schemas")
 
@@ -42,6 +46,7 @@ EVENT_TYPE_FILTERS = {
         "types": ["customer.created", "customer.deleted", "customer.updated"]
     },
     "invoices": {"type": "invoice.*"},
+    "payouts": {"type": "payout.*"},
     "plans": {"type": "plan.*"},
     "promotion_codes": {"type": "promotion_code.*"},
     "subscriptions": {"type": "customer.subscription.*"},
@@ -52,17 +57,17 @@ class StripeStream(Stream):
     """Stream class for Stripe streams."""
 
     @property
-    def sdk_object(self):
+    def sdk_object(self) -> StripeListableAPIResource:
         return (
             stripe.Event
             if self.replication_method == REPLICATION_INCREMENTAL
             else SDK_OBJECTS[self.name]
         )
 
-    def _make_created_filter(self):
+    def _make_created_filter(self) -> dict:
         return {"gte": self.get_starting_timestamp(partition=None)}
 
-    def _make_params(self, limit=100) -> dict:
+    def _make_params(self, limit: int = 100) -> dict:
         if self.replication_method == REPLICATION_INCREMENTAL:
             type_filter = EVENT_TYPE_FILTERS[self.name]
             other_filters = {"created": self._make_created_filter(), "limit": limit}
@@ -81,7 +86,7 @@ class StripeStream(Stream):
         else:
             raise ValueError
 
-    def _get_iterator(self, limit=100) -> stripe.api_resources.list_object.ListObject:
+    def _get_iterator(self, limit: int = 100) -> StripeListObject:
         params = self._make_params(limit=limit)
         return self.sdk_object.list(**params)
 
@@ -125,6 +130,15 @@ class InvoicesStream(StripeStream):
     primary_keys = ["id"]
     replication_key = "created"
     schema_filepath = SCHEMAS_DIR / "invoices.schema.json"
+
+
+class PayoutsStream(StripeStream):
+    """Stripe Plans stream"""
+
+    name = "payouts"
+    primary_keys = ["id"]
+    replication_key = "created"
+    schema_filepath = SCHEMAS_DIR / "payouts.schema.json"
 
 
 class PlansStream(StripeStream):

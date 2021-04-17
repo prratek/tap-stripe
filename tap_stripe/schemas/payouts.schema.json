@@ -1,0 +1,204 @@
+{
+  "type": [
+    "null",
+    "object"
+  ],
+  "properties": {
+    "id": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "object": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "api_version": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "created": {
+      "type": [
+        "null",
+        "integer"
+      ]
+    },
+    "data": {
+      "type": [
+        "null",
+        "object"
+      ],
+      "properties": {
+        "object": {
+          "type": [
+            "null",
+            "object"
+          ],
+          "properties": {
+            "id": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "object": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "amount": {
+              "type": [
+                "null",
+                "integer"
+              ]
+            },
+            "arrival_date": {
+              "type": [
+                "null",
+                "integer"
+              ]
+            },
+            "automatic": {
+              "type": [
+                "null",
+                "boolean"
+              ]
+            },
+            "balance_transaction": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "created": {
+              "type": [
+                "null",
+                "integer"
+              ]
+            },
+            "currency": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "description": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "destination": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "failure_balance_transaction": {
+              "type": [
+                "null"
+              ]
+            },
+            "failure_code": {
+              "type": [
+                "null"
+              ]
+            },
+            "failure_message": {
+              "type": [
+                "null"
+              ]
+            },
+            "livemode": {
+              "type": [
+                "null",
+                "boolean"
+              ]
+            },
+            "method": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "original_payout": {
+              "type": [
+                "null"
+              ]
+            },
+            "reversed_by": {
+              "type": [
+                "null"
+              ]
+            },
+            "source_type": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "statement_descriptor": {
+              "type": [
+                "null"
+              ]
+            },
+            "status": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "type": {
+              "type": [
+                "null",
+                "string"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "livemode": {
+      "type": [
+        "null",
+        "boolean"
+      ]
+    },
+    "pending_webhooks": {
+      "type": [
+        "null",
+        "integer"
+      ]
+    },
+    "request": {
+      "type": [
+        "null",
+        "object"
+      ],
+      "properties": {
+        "id": {
+          "type": [
+            "null"
+          ]
+        },
+        "idempotency_key": {
+          "type": [
+            "null"
+          ]
+        }
+      }
+    },
+    "type": {
+      "type": [
+        "null",
+        "string"
+      ]
+    }
+  }
+}
