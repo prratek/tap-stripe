@@ -10,6 +10,7 @@ from tap_stripe.streams import (
     CustomersStream,
     InvoicesStream,
     PlansStream,
+    PromotionCodesStream,
     SubscriptionsStream,
 )
 
@@ -18,6 +19,7 @@ STREAM_TYPES = [
     CustomersStream,
     InvoicesStream,
     PlansStream,
+    PromotionCodesStream,
     SubscriptionsStream,
 ]
 

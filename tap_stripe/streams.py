@@ -43,6 +43,7 @@ EVENT_TYPE_FILTERS = {
     },
     "invoices": {"type": "invoice.*"},
     "plans": {"type": "plan.*"},
+    "promotion_codes": {"type": "promotion_code.*"},
     "subscriptions": {"type": "customer.subscription.*"},
 }
 
@@ -133,6 +134,15 @@ class PlansStream(StripeStream):
     primary_keys = ["id"]
     replication_key = "created"
     schema_filepath = SCHEMAS_DIR / "shared/plans.schema.json"
+
+
+class PromotionCodesStream(StripeStream):
+    """Stripe Plans stream"""
+
+    name = "promotion_codes"
+    primary_keys = ["id"]
+    replication_key = "created"
+    schema_filepath = SCHEMAS_DIR / "promotion-codes.schema.json"
 
 
 class SubscriptionsStream(StripeStream):
