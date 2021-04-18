@@ -78,12 +78,14 @@
             },
             "application_fee": {
               "type": [
-                "null"
+                "null",
+                "string"
               ]
             },
             "application_fee_amount": {
               "type": [
-                "null"
+                "null",
+                "integer"
               ]
             },
             "balance_transaction": {
@@ -156,7 +158,8 @@
                 },
                 "phone": {
                   "type": [
-                    "null"
+                    "null",
+                    "string"
                   ]
                 }
               }
@@ -199,12 +202,14 @@
             },
             "destination": {
               "type": [
-                "null"
+                "null",
+                "string"
               ]
             },
             "dispute": {
               "type": [
-                "null"
+                "null",
+                "string"
               ]
             },
             "disputed": {
@@ -239,12 +244,14 @@
             },
             "on_behalf_of": {
               "type": [
-                "null"
+                "null",
+                "string"
               ]
             },
             "order": {
               "type": [
-                "null"
+                "null",
+                "string"
               ]
             },
             "outcome": {
@@ -385,8 +392,37 @@
                     },
                     "installments": {
                       "type": [
-                        "null"
-                      ]
+                        "null",
+                        "object"
+                      ],
+                      "properties": {
+                        "plan": {
+                          "type": [
+                            "null",
+                            "object"
+                          ],
+                          "properties": {
+                            "count": {
+                              "type": [
+                                "null",
+                                "integer"
+                              ]
+                            },
+                            "interval": {
+                              "type": [
+                                "null",
+                                "string"
+                              ]
+                            },
+                            "type": {
+                              "type": [
+                                "null",
+                                "string"
+                              ]
+                            }
+                          }
+                        }
+                      }
                     },
                     "last4": {
                       "type": [
@@ -402,8 +438,35 @@
                     },
                     "three_d_secure": {
                       "type": [
-                        "null"
-                      ]
+                        "null",
+                        "object"
+                      ],
+                      "properties": {
+                        "authentication_flow": {
+                          "type": [
+                            "null",
+                            "string"
+                          ]
+                        },
+                        "result": {
+                          "type": [
+                            "null",
+                            "string"
+                          ]
+                        },
+                        "result_reason": {
+                          "type": [
+                            "null",
+                            "string"
+                          ]
+                        },
+                        "version": {
+                          "type": [
+                            "null",
+                            "string"
+                          ]
+                        }
+                      }
                     },
                     "wallet": {
                       "type": [
@@ -437,12 +500,14 @@
             },
             "receipt_email": {
               "type": [
-                "null"
+                "null",
+                "string"
               ]
             },
             "receipt_number": {
               "type": [
-                "null"
+                "null",
+                "string"
               ]
             },
             "receipt_url": {
@@ -560,7 +625,8 @@
                       },
                       "source_transfer_reversal": {
                         "type": [
-                          "null"
+                          "null",
+                          "string"
                         ]
                       },
                       "status": {
@@ -571,7 +637,8 @@
                       },
                       "transfer_reversal": {
                         "type": [
-                          "null"
+                          "null",
+                          "string"
                         ]
                       }
                     }
@@ -581,13 +648,85 @@
             },
             "review": {
               "type": [
-                "null"
+                "null",
+                "string"
               ]
             },
             "shipping": {
               "type": [
-                "null"
-              ]
+                "null",
+                "object"
+              ],
+              "properties": {
+                "address": {
+                  "type": [
+                    "null",
+                    "object"
+                  ],
+                  "properties": {
+                    "city": {
+                      "type": [
+                        "null",
+                        "string"
+                      ]
+                    },
+                    "country": {
+                      "type": [
+                        "null",
+                        "string"
+                      ]
+                    },
+                    "line1": {
+                      "type": [
+                        "null",
+                        "string"
+                      ]
+                    },
+                    "line2": {
+                      "type": [
+                        "null",
+                        "string"
+                      ]
+                    },
+                    "postal_code": {
+                      "type": [
+                        "null",
+                        "string"
+                      ]
+                    },
+                    "state": {
+                      "type": [
+                        "null",
+                        "string"
+                      ]
+                    }
+                  }
+                },
+                "carrier": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "name": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "phone": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "tracking_number": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                }
+              }
             },
             "source": {
               "type": [
@@ -731,12 +870,14 @@
             },
             "source_transfer": {
               "type": [
-                "null"
+                "null",
+                "string"
               ]
             },
             "statement_descriptor": {
               "type": [
-                "null"
+                "null",
+                "string"
               ]
             },
             "statement_descriptor_suffix": {
@@ -753,12 +894,28 @@
             },
             "transfer_data": {
               "type": [
-                "null"
-              ]
+                "null",
+                "object"
+              ],
+              "properties": {
+                "amount": {
+                  "type": [
+                    "null",
+                    "integer"
+                  ]
+                },
+                "destination": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                }
+              }
             },
             "transfer_group": {
               "type": [
-                "null"
+                "null",
+                "string"
               ]
             },
             "metadata": {
@@ -940,7 +1097,8 @@
                       },
                       "reason": {
                         "type": [
-                          "null"
+                          "null",
+                          "string"
                         ]
                       },
                       "receipt_number": {
@@ -951,7 +1109,8 @@
                       },
                       "source_transfer_reversal": {
                         "type": [
-                          "null"
+                          "null",
+                          "string"
                         ]
                       },
                       "status": {
@@ -962,7 +1121,8 @@
                       },
                       "transfer_reversal": {
                         "type": [
-                          "null"
+                          "null",
+                          "string"
                         ]
                       }
                     }
