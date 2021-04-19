@@ -140,8 +140,162 @@
             },
             "discount": {
               "type": [
-                "null"
-              ]
+                "null",
+                "object"
+              ],
+              "properties": {
+                "id": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "object": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "checkout_session": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "coupon": {
+                  "type": [
+                    "null",
+                    "object"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": [
+                        "null",
+                        "string"
+                      ]
+                    },
+                    "object": {
+                      "type": [
+                        "null",
+                        "string"
+                      ]
+                    },
+                    "amount_off": {
+                      "type": [
+                        "null",
+                        "integer"
+                      ]
+                    },
+                    "created": {
+                      "type": [
+                        "null",
+                        "integer"
+                      ]
+                    },
+                    "currency": {
+                      "type": [
+                        "null",
+                        "string"
+                      ]
+                    },
+                    "duration": {
+                      "type": [
+                        "null",
+                        "string"
+                      ]
+                    },
+                    "duration_in_months": {
+                      "type": [
+                        "null",
+                        "integer"
+                      ]
+                    },
+                    "livemode": {
+                      "type": [
+                        "null",
+                        "boolean"
+                      ]
+                    },
+                    "max_redemptions": {
+                      "type": [
+                        "null"
+                      ]
+                    },
+                    "name": {
+                      "type": [
+                        "null",
+                        "string"
+                      ]
+                    },
+                    "percent_off": {
+                      "type": [
+                        "null",
+                        "number"
+                      ]
+                    },
+                    "redeem_by": {
+                      "type": [
+                        "null",
+                        "integer"
+                      ]
+                    },
+                    "times_redeemed": {
+                      "type": [
+                        "null",
+                        "integer"
+                      ]
+                    },
+                    "valid": {
+                      "type": [
+                        "null",
+                        "boolean"
+                      ]
+                    }
+                  }
+                },
+                "customer": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "end": {
+                  "type": [
+                    "null",
+                    "integer"
+                  ]
+                },
+                "invoice": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "invoice_item": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "promotion_code": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "start": {
+                  "type": [
+                    "null",
+                    "integer"
+                  ]
+                },
+                "subscription": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                }
+              }
             },
             "email": {
               "type": [
@@ -163,17 +317,40 @@
               "properties": {
                 "custom_fields": {
                   "type": [
-                    "null"
-                  ]
+                    "null",
+                    "array"
+                  ],
+                  "items": {
+                    "type": [
+                      "null",
+                      "object"
+                    ],
+                    "properties": {
+                      "name": {
+                        "type": [
+                          "null",
+                          "string"
+                        ]
+                      },
+                      "value": {
+                        "type": [
+                          "null",
+                          "string"
+                        ]
+                      }
+                    }
+                  }
                 },
                 "default_payment_method": {
                   "type": [
-                    "null"
+                    "null",
+                    "string"
                   ]
                 },
                 "footer": {
                   "type": [
-                    "null"
+                    "null",
+                    "string"
                   ]
                 }
               }
@@ -302,13 +479,85 @@
             },
             "phone": {
               "type": [
-                "null"
+                "null",
+                "string"
               ]
             },
             "shipping": {
               "type": [
-                "null"
-              ]
+                "null",
+                "object"
+              ],
+              "properties": {
+                "address": {
+                  "type": [
+                    "null",
+                    "object"
+                  ],
+                  "properties": {
+                    "city": {
+                      "type": [
+                        "null",
+                        "string"
+                      ]
+                    },
+                    "country": {
+                      "type": [
+                        "null",
+                        "string"
+                      ]
+                    },
+                    "line1": {
+                      "type": [
+                        "null",
+                        "string"
+                      ]
+                    },
+                    "line2": {
+                      "type": [
+                        "null",
+                        "string"
+                      ]
+                    },
+                    "postal_code": {
+                      "type": [
+                        "null",
+                        "string"
+                      ]
+                    },
+                    "state": {
+                      "type": [
+                        "null",
+                        "string"
+                      ]
+                    }
+                  }
+                },
+                "carrier": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "name": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "phone": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "tracking_number": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                }
+              }
             },
             "sources": {
               "type": [
@@ -525,7 +774,8 @@
                       },
                       "application_fee_percent": {
                         "type": [
-                          "null"
+                          "null",
+                          "number"
                         ]
                       },
                       "billing": {
@@ -542,8 +792,23 @@
                       },
                       "billing_thresholds": {
                         "type": [
-                          "null"
-                        ]
+                          "null",
+                          "object"
+                        ],
+                        "properties": {
+                          "amount_gte": {
+                            "type": [
+                              "null",
+                              "integer"
+                            ]
+                          },
+                          "reset_billing_cycle_anchor": {
+                            "type": [
+                              "null",
+                              "boolean"
+                            ]
+                          }
+                        }
                       },
                       "cancel_at": {
                         "type": [
@@ -595,17 +860,20 @@
                       },
                       "days_until_due": {
                         "type": [
-                          "null"
+                          "null",
+                          "integer"
                         ]
                       },
                       "default_payment_method": {
                         "type": [
-                          "null"
+                          "null",
+                          "string"
                         ]
                       },
                       "default_source": {
                         "type": [
-                          "null"
+                          "null",
+                          "string"
                         ]
                       },
                       "discount": {
@@ -628,7 +896,8 @@
                           },
                           "checkout_session": {
                             "type": [
-                              "null"
+                              "null",
+                              "string"
                             ]
                           },
                           "coupon": {
@@ -687,7 +956,8 @@
                               },
                               "max_redemptions": {
                                 "type": [
-                                  "null"
+                                  "null",
+                                  "integer"
                                 ]
                               },
                               "name": {
@@ -704,7 +974,8 @@
                               },
                               "redeem_by": {
                                 "type": [
-                                  "null"
+                                  "null",
+                                  "integer"
                                 ]
                               },
                               "times_redeemed": {
@@ -735,17 +1006,20 @@
                           },
                           "invoice": {
                             "type": [
-                              "null"
+                              "null",
+                              "string"
                             ]
                           },
                           "invoice_item": {
                             "type": [
-                              "null"
+                              "null",
+                              "string"
                             ]
                           },
                           "promotion_code": {
                             "type": [
-                              "null"
+                              "null",
+                              "string"
                             ]
                           },
                           "start": {
@@ -764,7 +1038,8 @@
                       },
                       "ended_at": {
                         "type": [
-                          "null"
+                          "null",
+                          "integer"
                         ]
                       },
                       "invoice_customer_balance_settings": {
@@ -818,8 +1093,23 @@
                                 },
                                 "billing_thresholds": {
                                   "type": [
-                                    "null"
-                                  ]
+                                    "null",
+                                    "object"
+                                  ],
+                                  "properties": {
+                                    "amount_gte": {
+                                      "type": [
+                                        "null",
+                                        "integer"
+                                      ]
+                                    },
+                                    "reset_billing_cycle_anchor": {
+                                      "type": [
+                                        "null",
+                                        "boolean"
+                                      ]
+                                    }
+                                  }
                                 },
                                 "created": {
                                   "type": [
@@ -853,7 +1143,8 @@
                                     },
                                     "aggregate_usage": {
                                       "type": [
-                                        "null"
+                                        "null",
+                                        "string"
                                       ]
                                     },
                                     "amount": {
@@ -950,18 +1241,73 @@
                                     },
                                     "tiers": {
                                       "type": [
-                                        "null"
-                                      ]
+                                        "null",
+                                        "array"
+                                      ],
+                                      "items": {
+                                        "type": [
+                                          "null",
+                                          "object"
+                                        ],
+                                        "properties": {
+                                          "flat_amount": {
+                                            "type": [
+                                              "null",
+                                              "integer"
+                                            ]
+                                          },
+                                          "flat_amount_decimal": {
+                                            "type": [
+                                              "null",
+                                              "number"
+                                            ]
+                                          },
+                                          "unit_amount": {
+                                            "type": [
+                                              "null",
+                                              "integer"
+                                            ]
+                                          },
+                                          "unit_amount_decimal": {
+                                            "type": [
+                                              "null",
+                                              "number"
+                                            ]
+                                          },
+                                          "up_to": {
+                                            "type": [
+                                              "null",
+                                              "integer"
+                                            ]
+                                          }
+                                        }
+                                      }
                                     },
                                     "tiers_mode": {
                                       "type": [
-                                        "null"
+                                        "null",
+                                        "string"
                                       ]
                                     },
                                     "transform_usage": {
                                       "type": [
-                                        "null"
-                                      ]
+                                        "null",
+                                        "object"
+                                      ],
+                                      "properties": {
+                                        "divide_by": {
+                                          "type": [
+                                            "null",
+                                            "integer"
+                                          ]
+                                        },
+                                        "round": {
+                                          "type": [
+                                            "null",
+                                            "string"
+                                          ]
+                                        }
+                                      }
                                     },
                                     "trial_period_days": {
                                       "type": [
@@ -1027,7 +1373,8 @@
                                     },
                                     "lookup_key": {
                                       "type": [
-                                        "null"
+                                        "null",
+                                        "string"
                                       ]
                                     },
                                     "metadata": {
@@ -1082,7 +1429,8 @@
                                       "properties": {
                                         "aggregate_usage": {
                                           "type": [
-                                            "null"
+                                            "null",
+                                            "string"
                                           ]
                                         },
                                         "interval": {
@@ -1113,13 +1461,29 @@
                                     },
                                     "tiers_mode": {
                                       "type": [
-                                        "null"
+                                        "null",
+                                        "string"
                                       ]
                                     },
                                     "transform_quantity": {
                                       "type": [
-                                        "null"
-                                      ]
+                                        "null",
+                                        "object"
+                                      ],
+                                      "properties": {
+                                        "divide_by": {
+                                          "type": [
+                                            "null",
+                                            "integer"
+                                          ]
+                                        },
+                                        "round": {
+                                          "type": [
+                                            "null",
+                                            "string"
+                                          ]
+                                        }
+                                      }
                                     },
                                     "type": {
                                       "type": [
@@ -1190,28 +1554,369 @@
                       },
                       "next_pending_invoice_item_invoice": {
                         "type": [
-                          "null"
+                          "null",
+                          "integer"
                         ]
                       },
                       "pause_collection": {
                         "type": [
-                          "null"
-                        ]
+                          "null",
+                          "object"
+                        ],
+                        "properties": {
+                          "behavior": {
+                            "type": [
+                              "null",
+                              "string"
+                            ]
+                          },
+                          "resumes_at": {
+                            "type": [
+                              "null",
+                              "integer"
+                            ]
+                          }
+                        }
                       },
                       "pending_invoice_item_interval": {
                         "type": [
-                          "null"
-                        ]
+                          "null",
+                          "object"
+                        ],
+                        "properties": {
+                          "interval": {
+                            "type": [
+                              "null",
+                              "string"
+                            ]
+                          },
+                          "interval_count": {
+                            "type": [
+                              "null",
+                              "integer"
+                            ]
+                          }
+                        }
                       },
                       "pending_setup_intent": {
                         "type": [
-                          "null"
+                          "null",
+                          "string"
                         ]
                       },
                       "pending_update": {
                         "type": [
-                          "null"
-                        ]
+                          "null",
+                          "object"
+                        ],
+                        "properties": {
+                          "billing_cycle_anchor": {
+                            "type": [
+                              "null",
+                              "integer"
+                            ]
+                          },
+                          "expires_at": {
+                            "type": [
+                              "null",
+                              "integer"
+                            ]
+                          },
+                          "subscription_items": {
+                            "type": [
+                              "null",
+                              "object"
+                            ],
+                            "properties": {
+                              "id": {
+                                "type": [
+                                  "null",
+                                  "string"
+                                ]
+                              },
+                              "object": {
+                                "type": [
+                                  "null",
+                                  "string"
+                                ]
+                              },
+                              "billing_thresholds": {
+                                "type": [
+                                  "null",
+                                  "object"
+                                ],
+                                "properties": {
+                                  "usage_gte": {
+                                    "type": [
+                                      "null",
+                                      "integer"
+                                    ]
+                                  }
+                                }
+                              },
+                              "created": {
+                                "type": [
+                                  "null",
+                                  "string"
+                                ]
+                              },
+                              "metadata": {
+                                "type": [
+                                  "null",
+                                  "string"
+                                ]
+                              },
+                              "price": {
+                                "type": [
+                                  "null",
+                                  "object"
+                                ],
+                                "properties": {
+                                  "id": {
+                                    "type": [
+                                      "null",
+                                      "string"
+                                    ]
+                                  },
+                                  "object": {
+                                    "type": [
+                                      "null",
+                                      "string"
+                                    ]
+                                  },
+                                  "active": {
+                                    "type": [
+                                      "null",
+                                      "boolean"
+                                    ]
+                                  },
+                                  "billing_scheme": {
+                                    "type": [
+                                      "null",
+                                      "string"
+                                    ]
+                                  },
+                                  "created": {
+                                    "type": [
+                                      "null",
+                                      "integer"
+                                    ]
+                                  },
+                                  "currency": {
+                                    "type": [
+                                      "null",
+                                      "string"
+                                    ]
+                                  },
+                                  "livemode": {
+                                    "type": [
+                                      "null",
+                                      "boolean"
+                                    ]
+                                  },
+                                  "lookup_key": {
+                                    "type": [
+                                      "null",
+                                      "string"
+                                    ]
+                                  },
+                                  "metadata": {
+                                    "type": [
+                                      "null",
+                                      "string"
+                                    ]
+                                  },
+                                  "nickname": {
+                                    "type": [
+                                      "null",
+                                      "string"
+                                    ]
+                                  },
+                                  "product": {
+                                    "type": [
+                                      "null",
+                                      "string"
+                                    ]
+                                  },
+                                  "recurring": {
+                                    "type": [
+                                      "null",
+                                      "object"
+                                    ],
+                                    "properties": {
+                                      "aggregate_usage": {
+                                        "type": [
+                                          "null",
+                                          "string"
+                                        ]
+                                      },
+                                      "interval": {
+                                        "type": [
+                                          "null",
+                                          "string"
+                                        ]
+                                      },
+                                      "interval_count": {
+                                        "type": [
+                                          "null",
+                                          "integer"
+                                        ]
+                                      },
+                                      "usage_type": {
+                                        "type": [
+                                          "null",
+                                          "string"
+                                        ]
+                                      }
+                                    }
+                                  },
+                                  "tiers_mode": {
+                                    "type": [
+                                      "null",
+                                      "string"
+                                    ]
+                                  },
+                                  "transform_quantity": {
+                                    "type": [
+                                      "null",
+                                      "object"
+                                    ],
+                                    "properties": {
+                                      "divide_by": {
+                                        "type": [
+                                          "null",
+                                          "integer"
+                                        ]
+                                      },
+                                      "round": {
+                                        "type": [
+                                          "null",
+                                          "string"
+                                        ]
+                                      }
+                                    }
+                                  },
+                                  "type": {
+                                    "type": [
+                                      "null",
+                                      "string"
+                                    ]
+                                  },
+                                  "unit_amount": {
+                                    "type": [
+                                      "null",
+                                      "integer"
+                                    ]
+                                  },
+                                  "unit_amount_decimal": {
+                                    "type": [
+                                      "null",
+                                      "number"
+                                    ]
+                                  }
+                                }
+                              },
+                              "quantity": {
+                                "type": [
+                                  "null",
+                                  "integer"
+                                ]
+                              },
+                              "subscription": {
+                                "type": [
+                                  "null",
+                                  "string"
+                                ]
+                              },
+                              "tax_rates": {
+                                "type": [
+                                  "null",
+                                  "object"
+                                ],
+                                "properties": {
+                                  "id": {
+                                    "type": [
+                                      "null",
+                                      "string"
+                                    ]
+                                  },
+                                  "object": {
+                                    "type": [
+                                      "null",
+                                      "string"
+                                    ]
+                                  },
+                                  "active": {
+                                    "type": [
+                                      "null",
+                                      "boolean"
+                                    ]
+                                  },
+                                  "country": {
+                                    "type": [
+                                      "null",
+                                      "string"
+                                    ]
+                                  },
+                                  "created": {
+                                    "type": [
+                                      "null",
+                                      "integer"
+                                    ]
+                                  },
+                                  "description": {
+                                    "type": [
+                                      "null",
+                                      "string"
+                                    ]
+                                  },
+                                  "display_name": {
+                                    "type": [
+                                      "null",
+                                      "string"
+                                    ]
+                                  },
+                                  "inclusive": {
+                                    "type": [
+                                      "null",
+                                      "boolean"
+                                    ]
+                                  },
+                                  "jurisdiction": {
+                                    "type": [
+                                      "null",
+                                      "string"
+                                    ]
+                                  },
+                                  "livemode": {
+                                    "type": [
+                                      "null",
+                                      "boolean"
+                                    ]
+                                  },
+                                  "metadata": {
+                                    "type": [
+                                      "null",
+                                      "string"
+                                    ]
+                                  },
+                                  "percentage": {
+                                    "type": [
+                                      "null",
+                                      "number"
+                                    ]
+                                  },
+                                  "state": {
+                                    "type": [
+                                      "null",
+                                      "string"
+                                    ]
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
                       },
                       "plan": {
                         "type": [
@@ -1239,7 +1944,8 @@
                           },
                           "aggregate_usage": {
                             "type": [
-                              "null"
+                              "null",
+                              "string"
                             ]
                           },
                           "amount": {
@@ -1336,18 +2042,67 @@
                           },
                           "tiers": {
                             "type": [
-                              "null"
-                            ]
+                              "null",
+                              "object"
+                            ],
+                            "properties": {
+                              "flat_amount": {
+                                "type": [
+                                  "null",
+                                  "integer"
+                                ]
+                              },
+                              "flat_amount_decimal": {
+                                "type": [
+                                  "null",
+                                  "number"
+                                ]
+                              },
+                              "unit_amount": {
+                                "type": [
+                                  "null",
+                                  "integer"
+                                ]
+                              },
+                              "unit_amount_decimal": {
+                                "type": [
+                                  "null",
+                                  "number"
+                                ]
+                              },
+                              "up_to": {
+                                "type": [
+                                  "null",
+                                  "integer"
+                                ]
+                              }
+                            }
                           },
                           "tiers_mode": {
                             "type": [
-                              "null"
+                              "null",
+                              "string"
                             ]
                           },
                           "transform_usage": {
                             "type": [
-                              "null"
-                            ]
+                              "null",
+                              "object"
+                            ],
+                            "properties": {
+                              "divide_by": {
+                                "type": [
+                                  "null",
+                                  "integer"
+                                ]
+                              },
+                              "round": {
+                                "type": [
+                                  "null",
+                                  "string"
+                                ]
+                              }
+                            }
                           },
                           "trial_period_days": {
                             "type": [
@@ -1395,13 +2150,28 @@
                       },
                       "tax_percent": {
                         "type": [
-                          "null"
+                          "number"
                         ]
                       },
                       "transfer_data": {
                         "type": [
-                          "null"
-                        ]
+                          "null",
+                          "object"
+                        ],
+                        "properties": {
+                          "amount": {
+                            "type": [
+                              "null",
+                              "integer"
+                            ]
+                          },
+                          "destination": {
+                            "type": [
+                              "null",
+                              "string"
+                            ]
+                          }
+                        }
                       },
                       "trial_end": {
                         "type": [
@@ -1642,12 +2412,14 @@
             },
             "tax_info": {
               "type": [
-                "null"
+                "null",
+                "string"
               ]
             },
             "tax_info_verification": {
               "type": [
-                "null"
+                "null",
+                "string"
               ]
             }
           }
@@ -1678,44 +2450,52 @@
                 },
                 "page_uri": {
                   "type": [
-                    "null"
+                    "null",
+                    "string"
                   ]
                 },
                 "itm_campaign": {
                   "type": [
-                    "null"
+                    "null",
+                    "string"
                   ]
                 },
                 "itm_medium": {
                   "type": [
-                    "null"
+                    "null",
+                    "string"
                   ]
                 },
                 "itm_source": {
                   "type": [
-                    "null"
+                    "null",
+                    "string"
                   ]
                 },
                 "utm_campaign": {
                   "type": [
-                    "null"
+                    "null",
+                    "string"
                   ]
                 },
                 "utm_medium": {
                   "type": [
-                    "null"
+                    "null",
+                    "string"
                   ]
                 },
                 "utm_source": {
                   "type": [
-                    "null"
+                    "null",
+                    "string"
                   ]
                 }
               }
             },
             "currency": {
               "type": [
-                "null"
+                "null",
+                "string"
               ]
             },
             "address": {
