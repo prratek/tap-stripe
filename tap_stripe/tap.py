@@ -16,13 +16,13 @@ from tap_stripe.streams import (
 )
 
 STREAM_TYPES = [
-    # ChargesStream,
+    ChargesStream,
     CustomersStream,
-    # InvoicesStream,
-    # PayoutsStream,
-    # PlansStream,
-    # PromotionCodesStream,
-    # SubscriptionsStream,
+    InvoicesStream,
+    PayoutsStream,
+    PlansStream,
+    PromotionCodesStream,
+    SubscriptionsStream,
 ]
 
 
