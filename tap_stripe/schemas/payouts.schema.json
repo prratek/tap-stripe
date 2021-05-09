@@ -102,17 +102,20 @@
             },
             "failure_balance_transaction": {
               "type": [
-                "null"
+                "null",
+                "string"
               ]
             },
             "failure_code": {
               "type": [
-                "null"
+                "null",
+                "string"
               ]
             },
             "failure_message": {
               "type": [
-                "null"
+                "null",
+                "string"
               ]
             },
             "livemode": {
@@ -129,12 +132,14 @@
             },
             "original_payout": {
               "type": [
-                "null"
+                "null",
+                "string"
               ]
             },
             "reversed_by": {
               "type": [
-                "null"
+                "null",
+                "string"
               ]
             },
             "source_type": {
@@ -145,7 +150,8 @@
             },
             "statement_descriptor": {
               "type": [
-                "null"
+                "null",
+                "string"
               ]
             },
             "status": {
@@ -184,12 +190,14 @@
       "properties": {
         "id": {
           "type": [
-            "null"
+            "null",
+            "string"
           ]
         },
         "idempotency_key": {
           "type": [
-            "null"
+            "null",
+            "string"
           ]
         }
       }
