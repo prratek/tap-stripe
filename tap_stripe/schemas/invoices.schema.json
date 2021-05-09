@@ -66,8 +66,15 @@
             },
             "account_tax_ids": {
               "type": [
-                "null"
-              ]
+                "null",
+                "array"
+              ],
+              "items": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              }
             },
             "amount_due": {
               "type": [
@@ -89,7 +96,8 @@
             },
             "application_fee": {
               "type": [
-                "null"
+                "null",
+                "integer"
               ]
             },
             "attempt_count": {
@@ -154,8 +162,29 @@
             },
             "custom_fields": {
               "type": [
-                "null"
-              ]
+                "null",
+                "array"
+              ],
+              "items": {
+                "type": [
+                  "null",
+                  "object"
+                ],
+                "properties": {
+                  "name": {
+                    "type": [
+                      "null",
+                      "string"
+                    ]
+                  },
+                  "value": {
+                    "type": [
+                      "null",
+                      "string"
+                    ]
+                  }
+                }
+              }
             },
             "customer": {
               "type": [
@@ -221,7 +250,8 @@
             },
             "customer_phone": {
               "type": [
-                "null"
+                "null",
+                "string"
               ]
             },
             "customer_shipping": {
@@ -302,12 +332,14 @@
             },
             "default_payment_method": {
               "type": [
-                "null"
+                "null",
+                "string"
               ]
             },
             "default_source": {
               "type": [
-                "null"
+                "null",
+                "string"
               ]
             },
             "description": {
@@ -336,7 +368,8 @@
                 },
                 "checkout_session": {
                   "type": [
-                    "null"
+                    "null",
+                    "string"
                   ]
                 },
                 "coupon": {
@@ -395,7 +428,8 @@
                     },
                     "max_redemptions": {
                       "type": [
-                        "null"
+                        "null",
+                        "integer"
                       ]
                     },
                     "name": {
@@ -412,7 +446,8 @@
                     },
                     "redeem_by": {
                       "type": [
-                        "null"
+                        "null",
+                        "integer"
                       ]
                     },
                     "times_redeemed": {
@@ -443,12 +478,14 @@
                 },
                 "invoice": {
                   "type": [
-                    "null"
+                    "null",
+                    "string"
                   ]
                 },
                 "invoice_item": {
                   "type": [
-                    "null"
+                    "null",
+                    "string"
                   ]
                 },
                 "promotion_code": {
@@ -491,7 +528,8 @@
             },
             "footer": {
               "type": [
-                "null"
+                "null",
+                "string"
               ]
             },
             "forgiven": {
@@ -514,8 +552,47 @@
             },
             "last_finalization_error": {
               "type": [
-                "null"
-              ]
+                "null",
+                "object"
+              ],
+              "properties": {
+                "code": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "doc_url": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "message": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "param": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "payment_method_type": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "type": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                }
+              }
             },
             "lines": {
               "type": [
@@ -634,7 +711,8 @@
                           },
                           "aggregate_usage": {
                             "type": [
-                              "null"
+                              "null",
+                              "string"
                             ]
                           },
                           "amount": {
@@ -731,18 +809,73 @@
                           },
                           "tiers": {
                             "type": [
-                              "null"
-                            ]
+                              "null",
+                              "array"
+                            ],
+                            "items": {
+                              "type": [
+                                "null",
+                                "object"
+                              ],
+                              "properties": {
+                                "flat_amount": {
+                                  "type": [
+                                    "null",
+                                    "integer"
+                                  ]
+                                },
+                                "flat_amount_decimal": {
+                                  "type": [
+                                    "null",
+                                    "number"
+                                  ]
+                                },
+                                "unit_amount": {
+                                  "type": [
+                                    "null",
+                                    "integer"
+                                  ]
+                                },
+                                "unit_amount_decimal": {
+                                  "type": [
+                                    "null",
+                                    "number"
+                                  ]
+                                },
+                                "up_to": {
+                                  "type": [
+                                    "null",
+                                    "integer"
+                                  ]
+                                }
+                              }
+                            }
                           },
                           "tiers_mode": {
                             "type": [
-                              "null"
+                              "null",
+                              "string"
                             ]
                           },
                           "transform_usage": {
                             "type": [
-                              "null"
-                            ]
+                              "null",
+                              "object"
+                            ],
+                            "properties": {
+                              "divide_by": {
+                                "type": [
+                                  "null",
+                                  "integer"
+                                ]
+                              },
+                              "round": {
+                                "type": [
+                                  "null",
+                                  "string"
+                                ]
+                              }
+                            }
                           },
                           "trial_period_days": {
                             "type": [
@@ -808,7 +941,8 @@
                           },
                           "lookup_key": {
                             "type": [
-                              "null"
+                              "null",
+                              "string"
                             ]
                           },
                           "metadata": {
@@ -863,7 +997,8 @@
                             "properties": {
                               "aggregate_usage": {
                                 "type": [
-                                  "null"
+                                  "null",
+                                  "string"
                                 ]
                               },
                               "interval": {
@@ -894,13 +1029,29 @@
                           },
                           "tiers_mode": {
                             "type": [
-                              "null"
+                              "null",
+                              "string"
                             ]
                           },
                           "transform_quantity": {
                             "type": [
-                              "null"
-                            ]
+                              "null",
+                              "object"
+                            ],
+                            "properties": {
+                              "divide_by": {
+                                "type": [
+                                  "null",
+                                  "integer"
+                                ]
+                              },
+                              "round": {
+                                "type": [
+                                  "null",
+                                  "string"
+                                ]
+                              }
+                            }
                           },
                           "type": {
                             "type": [
@@ -1143,7 +1294,8 @@
             },
             "on_behalf_of": {
               "type": [
-                "null"
+                "null",
+                "string"
               ]
             },
             "paid": {
@@ -1166,13 +1318,51 @@
               "properties": {
                 "payment_method_options": {
                   "type": [
-                    "null"
-                  ]
+                    "null",
+                    "object"
+                  ],
+                  "properties": {
+                    "bancontact": {
+                      "type": [
+                        "null",
+                        "object"
+                      ],
+                      "properties": {
+                        "preferred_language": {
+                          "type": [
+                            "null",
+                            "string"
+                          ]
+                        }
+                      }
+                    },
+                    "card": {
+                      "type": [
+                        "null",
+                        "object"
+                      ],
+                      "properties": {
+                        "request_three_d_secure": {
+                          "type": [
+                            "null",
+                            "string"
+                          ]
+                        }
+                      }
+                    }
+                  }
                 },
                 "payment_method_types": {
                   "type": [
-                    "null"
-                  ]
+                    "null",
+                    "array"
+                  ],
+                  "items": {
+                    "type": [
+                      "null",
+                      "string"
+                    ]
+                  }
                 }
               }
             },
@@ -1202,7 +1392,8 @@
             },
             "receipt_number": {
               "type": [
-                "null"
+                "null",
+                "string"
               ]
             },
             "starting_balance": {
@@ -1213,7 +1404,8 @@
             },
             "statement_descriptor": {
               "type": [
-                "null"
+                "null",
+                "string"
               ]
             },
             "status": {
@@ -1236,7 +1428,8 @@
                 },
                 "marked_uncollectible_at": {
                   "type": [
-                    "null"
+                    "null",
+                    "integer"
                   ]
                 },
                 "paid_at": {
@@ -1247,7 +1440,8 @@
                 },
                 "voided_at": {
                   "type": [
-                    "null"
+                    "null",
+                    "integer"
                   ]
                 }
               }
@@ -1266,12 +1460,14 @@
             },
             "tax": {
               "type": [
-                "null"
+                "null",
+                "integer"
               ]
             },
             "tax_percent": {
               "type": [
-                "null"
+                "null",
+                "number"
               ]
             },
             "total": {
@@ -1282,8 +1478,23 @@
             },
             "transfer_data": {
               "type": [
-                "null"
-              ]
+                "null",
+                "object"
+              ],
+              "properties": {
+                "amount": {
+                  "type": [
+                    "null",
+                    "integer"
+                  ]
+                },
+                "destination": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                }
+              }
             },
             "webhooks_delivered_at": {
               "type": [
@@ -1381,27 +1592,32 @@
             },
             "due_date": {
               "type": [
-                "null"
+                "null",
+                "integer"
               ]
             },
             "ending_balance": {
               "type": [
-                "null"
+                "null",
+                "integer"
               ]
             },
             "finalized_at": {
               "type": [
-                "null"
+                "null",
+                "integer"
               ]
             },
             "hosted_invoice_url": {
               "type": [
-                "null"
+                "null",
+                "string"
               ]
             },
             "invoice_pdf": {
               "type": [
-                "null"
+                "null",
+                "string"
               ]
             },
             "next_payment_attempt": {
@@ -1418,7 +1634,8 @@
             },
             "payment_intent": {
               "type": [
-                "null"
+                "null",
+                "string"
               ]
             },
             "status": {
@@ -1435,12 +1652,14 @@
               "properties": {
                 "finalized_at": {
                   "type": [
-                    "null"
+                    "null",
+                    "integer"
                   ]
                 },
                 "paid_at": {
                   "type": [
-                    "null"
+                    "null",
+                    "integer"
                   ]
                 }
               }
