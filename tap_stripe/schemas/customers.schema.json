@@ -139,7 +139,164 @@
               ]
             },
             "discount": {
-              "$ref": "file:///Users/pramchandani/projects/tap-stripe/tap_stripe/schemas/shared/discount.schema.json"
+              "type": [
+                "null",
+                "object"
+              ],
+              "properties": {
+                "id": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "object": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "checkout_session": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "coupon": {
+                  "type": [
+                    "null",
+                    "object"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": [
+                        "null",
+                        "string"
+                      ]
+                    },
+                    "object": {
+                      "type": [
+                        "null",
+                        "string"
+                      ]
+                    },
+                    "amount_off": {
+                      "type": [
+                        "null",
+                        "integer"
+                      ]
+                    },
+                    "created": {
+                      "type": [
+                        "null",
+                        "integer"
+                      ]
+                    },
+                    "currency": {
+                      "type": [
+                        "null",
+                        "string"
+                      ]
+                    },
+                    "duration": {
+                      "type": [
+                        "null",
+                        "string"
+                      ]
+                    },
+                    "duration_in_months": {
+                      "type": [
+                        "null",
+                        "integer"
+                      ]
+                    },
+                    "livemode": {
+                      "type": [
+                        "null",
+                        "boolean"
+                      ]
+                    },
+                    "max_redemptions": {
+                      "type": [
+                        "null",
+                        "integer"
+                      ]
+                    },
+                    "name": {
+                      "type": [
+                        "null",
+                        "string"
+                      ]
+                    },
+                    "percent_off": {
+                      "type": [
+                        "null",
+                        "number"
+                      ]
+                    },
+                    "redeem_by": {
+                      "type": [
+                        "null",
+                        "integer"
+                      ]
+                    },
+                    "times_redeemed": {
+                      "type": [
+                        "null",
+                        "integer"
+                      ]
+                    },
+                    "valid": {
+                      "type": [
+                        "null",
+                        "boolean"
+                      ]
+                    }
+                  }
+                },
+                "customer": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "end": {
+                  "type": [
+                    "null",
+                    "integer"
+                  ]
+                },
+                "invoice": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "invoice_item": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "promotion_code": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "start": {
+                  "type": [
+                    "null",
+                    "integer"
+                  ]
+                },
+                "subscription": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                }
+              }
             },
             "email": {
               "type": [
@@ -721,7 +878,164 @@
                         ]
                       },
                       "discount": {
-                        "$ref": "file:///Users/pramchandani/projects/tap-stripe/tap_stripe/schemas/shared/discount.schema.json"
+                        "type": [
+                          "null",
+                          "object"
+                        ],
+                        "properties": {
+                          "id": {
+                            "type": [
+                              "null",
+                              "string"
+                            ]
+                          },
+                          "object": {
+                            "type": [
+                              "null",
+                              "string"
+                            ]
+                          },
+                          "checkout_session": {
+                            "type": [
+                              "null",
+                              "string"
+                            ]
+                          },
+                          "coupon": {
+                            "type": [
+                              "null",
+                              "object"
+                            ],
+                            "properties": {
+                              "id": {
+                                "type": [
+                                  "null",
+                                  "string"
+                                ]
+                              },
+                              "object": {
+                                "type": [
+                                  "null",
+                                  "string"
+                                ]
+                              },
+                              "amount_off": {
+                                "type": [
+                                  "null",
+                                  "integer"
+                                ]
+                              },
+                              "created": {
+                                "type": [
+                                  "null",
+                                  "integer"
+                                ]
+                              },
+                              "currency": {
+                                "type": [
+                                  "null",
+                                  "string"
+                                ]
+                              },
+                              "duration": {
+                                "type": [
+                                  "null",
+                                  "string"
+                                ]
+                              },
+                              "duration_in_months": {
+                                "type": [
+                                  "null",
+                                  "integer"
+                                ]
+                              },
+                              "livemode": {
+                                "type": [
+                                  "null",
+                                  "boolean"
+                                ]
+                              },
+                              "max_redemptions": {
+                                "type": [
+                                  "null",
+                                  "integer"
+                                ]
+                              },
+                              "name": {
+                                "type": [
+                                  "null",
+                                  "string"
+                                ]
+                              },
+                              "percent_off": {
+                                "type": [
+                                  "null",
+                                  "number"
+                                ]
+                              },
+                              "redeem_by": {
+                                "type": [
+                                  "null",
+                                  "integer"
+                                ]
+                              },
+                              "times_redeemed": {
+                                "type": [
+                                  "null",
+                                  "integer"
+                                ]
+                              },
+                              "valid": {
+                                "type": [
+                                  "null",
+                                  "boolean"
+                                ]
+                              }
+                            }
+                          },
+                          "customer": {
+                            "type": [
+                              "null",
+                              "string"
+                            ]
+                          },
+                          "end": {
+                            "type": [
+                              "null",
+                              "integer"
+                            ]
+                          },
+                          "invoice": {
+                            "type": [
+                              "null",
+                              "string"
+                            ]
+                          },
+                          "invoice_item": {
+                            "type": [
+                              "null",
+                              "string"
+                            ]
+                          },
+                          "promotion_code": {
+                            "type": [
+                              "null",
+                              "string"
+                            ]
+                          },
+                          "start": {
+                            "type": [
+                              "null",
+                              "integer"
+                            ]
+                          },
+                          "subscription": {
+                            "type": [
+                              "null",
+                              "string"
+                            ]
+                          }
+                        }
                       },
                       "ended_at": {
                         "type": [
