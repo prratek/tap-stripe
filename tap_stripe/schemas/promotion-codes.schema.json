@@ -108,7 +108,8 @@
                 },
                 "duration_in_months": {
                   "type": [
-                    "null"
+                    "null",
+                    "integer"
                   ]
                 },
                 "livemode": {
@@ -119,7 +120,8 @@
                 },
                 "max_redemptions": {
                   "type": [
-                    "null"
+                    "null",
+                    "integer"
                   ]
                 },
                 "name": {
@@ -136,7 +138,8 @@
                 },
                 "redeem_by": {
                   "type": [
-                    "null"
+                    "null",
+                    "integer"
                   ]
                 },
                 "times_redeemed": {
@@ -161,7 +164,8 @@
             },
             "customer": {
               "type": [
-                "null"
+                "null",
+                "string"
               ]
             },
             "expires_at": {
@@ -288,12 +292,14 @@
                 },
                 "minimum_amount": {
                   "type": [
-                    "null"
+                    "null",
+                    "integer"
                   ]
                 },
                 "minimum_amount_currency": {
                   "type": [
-                    "null"
+                    "null",
+                    "string"
                   ]
                 }
               }
