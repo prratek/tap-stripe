@@ -19,8 +19,8 @@ STREAM_TYPES = [
     # ChargesStream,
     # CustomersStream,
     # InvoicesStream,
-    PayoutsStream,
-    # PlansStream,
+    # PayoutsStream,
+    PlansStream,
     # PromotionCodesStream,
     # SubscriptionsStream,
 ]
