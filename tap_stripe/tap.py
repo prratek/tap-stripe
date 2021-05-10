@@ -6,6 +6,7 @@ from singer_sdk import Stream, Tap
 from singer_sdk.typing import DateTimeType, PropertiesList, Property, StringType
 
 from tap_stripe.streams import (
+    BalanceTransactionsStream,
     ChargesStream,
     CustomersStream,
     InvoicesStream,
@@ -16,13 +17,14 @@ from tap_stripe.streams import (
 )
 
 STREAM_TYPES = [
-    ChargesStream,
-    CustomersStream,
-    InvoicesStream,
-    PayoutsStream,
-    PlansStream,
-    PromotionCodesStream,
-    SubscriptionsStream,
+    BalanceTransactionsStream,
+    # ChargesStream,
+    # CustomersStream,
+    # InvoicesStream,
+    # PayoutsStream,
+    # PlansStream,
+    # PromotionCodesStream,
+    # SubscriptionsStream,
 ]
 
 

@@ -56,8 +56,12 @@ EVENT_TYPE_FILTERS = {
 class StripeStream(Stream):
     """Stream class for Stripe streams."""
 
+    is_immutable = False
+
     @property
     def sdk_object(self) -> StripeListableAPIResource:
+        if self.is_immutable:
+            return SDK_OBJECTS[self.name]
         return (
             stripe.Event
             if self.replication_method == REPLICATION_INCREMENTAL
@@ -69,7 +73,7 @@ class StripeStream(Stream):
 
     def _make_params(self, limit: int = 100) -> dict:
         if self.replication_method == REPLICATION_INCREMENTAL:
-            type_filter = EVENT_TYPE_FILTERS[self.name]
+            type_filter = {} if self.is_immutable else EVENT_TYPE_FILTERS[self.name]
             other_filters = {"created": self._make_created_filter(), "limit": limit}
             return {**type_filter, **other_filters}
 
@@ -103,6 +107,16 @@ class StripeStream(Stream):
 
         for row in iterator.auto_paging_iter():
             yield row.to_dict()
+
+
+class BalanceTransactionsStream(StripeStream):
+    """Stripe Plans stream"""
+
+    name = "balance_transactions"
+    is_immutable = True
+    primary_keys = ["id"]
+    replication_key = "created"
+    schema_filepath = SCHEMAS_DIR / "balance-transactions.schema.json"
 
 
 class ChargesStream(StripeStream):
