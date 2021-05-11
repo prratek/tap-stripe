@@ -1,0 +1,184 @@
+{
+  "type": [
+    "null",
+    "object"
+  ],
+  "properties": {
+    "id": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "object": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "api_version": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "created": {
+      "type": [
+        "null",
+        "integer"
+      ]
+    },
+    "data": {
+      "type": [
+        "null",
+        "object"
+      ],
+      "properties": {
+        "object": {
+          "type": [
+            "null",
+            "object"
+          ],
+          "properties": {
+            "id": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "object": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "amount_off": {
+              "type": [
+                "null",
+                "integer"
+              ]
+            },
+            "created": {
+              "type": [
+                "null",
+                "integer"
+              ]
+            },
+            "currency": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "duration": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "duration_in_months": {
+              "type": [
+                "null",
+                "integer"
+              ]
+            },
+            "livemode": {
+              "type": [
+                "null",
+                "boolean"
+              ]
+            },
+            "max_redemptions": {
+              "type": [
+                "null",
+                "integer"
+              ]
+            },
+            "name": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "percent_off": {
+              "type": [
+                "null",
+                "number"
+              ]
+            },
+            "redeem_by": {
+              "type": [
+                "null",
+                "integer"
+              ]
+            },
+            "times_redeemed": {
+              "type": [
+                "null",
+                "integer"
+              ]
+            },
+            "valid": {
+              "type": [
+                "null",
+                "boolean"
+              ]
+            }
+          }
+        },
+        "previous_attributes": {
+          "type": [
+            "null",
+            "object"
+          ],
+          "properties": {
+            "name": {
+              "type": [
+                "null",
+                "string"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "livemode": {
+      "type": [
+        "null",
+        "boolean"
+      ]
+    },
+    "pending_webhooks": {
+      "type": [
+        "null",
+        "integer"
+      ]
+    },
+    "request": {
+      "type": [
+        "null",
+        "object"
+      ],
+      "properties": {
+        "id": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "idempotency_key": {
+          "type": [
+            "null",
+            "string"
+          ]
+        }
+      }
+    },
+    "type": {
+      "type": [
+        "null",
+        "string"
+      ]
+    }
+  }
+}
