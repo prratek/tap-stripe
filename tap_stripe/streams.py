@@ -173,6 +173,19 @@ class PromotionCodesStream(StripeStream):
     schema_filepath = SCHEMAS_DIR / "promotion-codes.schema.json"
 
 
+class RefundsStream(StripeStream):
+    """Stripe Plans stream"""
+
+    name = "refunds"
+    # It appears you can only update metadata on a Refund object - https://stripe.com/docs/api/refunds/update
+    # Further, only the charge.refund.updated event returns a refund, with no event firing on creation -
+    # https://stripe.com/docs/api/events/types#event_types-charge.refund.updated
+    is_immutable = True
+    primary_keys = ["id"]
+    replication_key = "created"
+    schema_filepath = SCHEMAS_DIR / "refunds.schema.json"
+
+
 class SubscriptionsStream(StripeStream):
     """Stripe Subscriptions stream."""
 
