@@ -50,6 +50,7 @@ EVENT_TYPE_FILTERS = {
     "payouts": {"type": "payout.*"},
     "plans": {"type": "plan.*"},
     "promotion_codes": {"type": "promotion_code.*"},
+    "subscription_schedules": {"type": "subscription_schedule.*"},
     "subscriptions": {"type": "customer.subscription.*"},
 }
 
@@ -194,6 +195,15 @@ class RefundsStream(StripeStream):
     primary_keys = ["id"]
     replication_key = "created"
     schema_filepath = SCHEMAS_DIR / "refunds.schema.json"
+
+
+class SubscriptionSchedulesStream(StripeStream):
+    """Stripe Subscriptions stream."""
+
+    name = "subscription_schedules"
+    primary_keys = ["id"]
+    replication_key = "created"
+    schema_filepath = SCHEMAS_DIR / "subscription-schedules.schema.json"
 
 
 class SubscriptionsStream(StripeStream):
