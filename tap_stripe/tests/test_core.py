@@ -1,13 +1,15 @@
 """Tests standard tap features using the built-in SDK tests library."""
 
-import datetime
+import os
 
-from singer_sdk.helpers._util import read_json_file
 from singer_sdk.testing import get_standard_tap_tests
 
 from tap_stripe.tap import TapStripe
 
-SAMPLE_CONFIG = read_json_file(".secrets/config.json")
+SAMPLE_CONFIG = {
+    "start_date": "2021-01-01",
+    "api_key": os.environ.get("TAP_STRIPE_API_KEY"),
+}
 
 
 # Run standard built-in tap tests from the SDK:

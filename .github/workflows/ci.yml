@@ -33,4 +33,6 @@ jobs:
         run: poetry install
 
       - name: Run Tests
+        env:
+          TAP_STRIPE_API_KEY: ${{ secrets.TAP_STRIPE_API_KEY }}
         run: poetry run pytest
