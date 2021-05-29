@@ -1,3 +1,4 @@
 /.env
 /meltano.yml
 /config.json
+/.meltano/
