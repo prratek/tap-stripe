@@ -1,4 +1,5 @@
 # tap-stripe
+![CI Build](https://github.com/prratek/tap-stripe/actions/workflows/ci-build.yml/badge.svg)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 `tap-stripe` is a Singer tap for Stripe built with the [Singer SDK](https://gitlab.com/meltano/singer-sdk).
