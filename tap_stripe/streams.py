@@ -3,6 +3,7 @@
 from pathlib import Path
 from typing import Iterable, Optional
 
+import pendulum
 import stripe
 from singer_sdk.streams import Stream
 from singer_sdk.streams.core import REPLICATION_FULL_TABLE, REPLICATION_INCREMENTAL
@@ -61,6 +62,13 @@ class StripeStream(Stream):
 
     is_immutable = False
 
+    def get_starting_created_value(self, context: Optional[dict]) -> Optional[int]:
+        val = self.get_starting_replication_key_value(context)
+        if isinstance(val, str):
+            return pendulum.parse(val).int_timestamp
+        assert isinstance(val, int)
+        return val
+
     @property
     def sdk_object(self) -> StripeListableAPIResource:
         if self.is_immutable:
@@ -72,7 +80,7 @@ class StripeStream(Stream):
         )
 
     def _make_created_filter(self, context: Optional[dict]) -> dict:
-        return {"gte": self.get_starting_replication_key_value(context)}
+        return {"gte": self.get_starting_created_value(context)}
 
     def _make_params(self, context: Optional[dict], limit: int = 100) -> dict:
         if self.replication_method == REPLICATION_INCREMENTAL:
