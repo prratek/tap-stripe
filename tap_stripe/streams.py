@@ -3,6 +3,7 @@
 from pathlib import Path
 from typing import Iterable, Optional
 
+import pendulum
 import stripe
 from singer_sdk.streams import Stream
 from singer_sdk.streams.core import REPLICATION_FULL_TABLE, REPLICATION_INCREMENTAL
@@ -61,6 +62,13 @@ class StripeStream(Stream):
 
     is_immutable = False
 
+    def get_starting_created_value(self, context: Optional[dict]) -> Optional[int]:
+        val = self.get_starting_replication_key_value(context)
+        if isinstance(val, str):
+            return pendulum.parse(val).int_timestamp
+        assert isinstance(val, int)
+        return val
+
     @property
     def sdk_object(self) -> StripeListableAPIResource:
         if self.is_immutable:
@@ -71,33 +79,38 @@ class StripeStream(Stream):
             else SDK_OBJECTS[self.name]
         )
 
-    def _make_created_filter(self) -> dict:
-        return {"gte": self.get_starting_timestamp(partition=None)}
+    def _make_created_filter(self, context: Optional[dict]) -> dict:
+        return {"gte": self.get_starting_created_value(context)}
 
-    def _make_params(self, limit: int = 100) -> dict:
+    def _make_params(self, context: Optional[dict], limit: int = 100) -> dict:
         if self.replication_method == REPLICATION_INCREMENTAL:
             type_filter = {} if self.is_immutable else EVENT_TYPE_FILTERS[self.name]
-            other_filters = {"created": self._make_created_filter(), "limit": limit}
+            other_filters = {
+                "created": self._make_created_filter(context),
+                "limit": limit,
+            }
             return {**type_filter, **other_filters}
 
         elif self.replication_method == REPLICATION_FULL_TABLE:
             if self.name == "subscriptions":
                 return {
-                    "created": self._make_created_filter(),
+                    "created": self._make_created_filter(context),
                     "limit": limit,
                     "status": "all",
                 }
             else:
-                return {"created": self._make_created_filter(), "limit": limit}
+                return {"created": self._make_created_filter(context), "limit": limit}
 
         else:
             raise ValueError
 
-    def _get_iterator(self, limit: int = 100) -> StripeListObject:
-        params = self._make_params(limit=limit)
+    def _get_iterator(
+        self, context: Optional[dict], limit: int = 100
+    ) -> StripeListObject:
+        params = self._make_params(context, limit=limit)
         return self.sdk_object.list(**params)
 
-    def get_records(self, partition: Optional[dict] = None) -> Iterable[dict]:
+    def get_records(self, context: Optional[dict]) -> Iterable[dict]:
         """Return a generator of row-type dictionary objects.
 
         The optional `partition` argument is used to identify a specific slice of the
@@ -106,7 +119,7 @@ class StripeStream(Stream):
         """
 
         stripe.api_key = self._config["api_key"]
-        iterator = self._get_iterator()
+        iterator = self._get_iterator(context)
 
         for row in iterator.auto_paging_iter():
             yield row.to_dict()
