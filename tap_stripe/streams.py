@@ -72,7 +72,7 @@ class StripeStream(Stream):
         )
 
     def _make_created_filter(self) -> dict:
-        return {"gte": self.get_starting_timestamp(partition=None)}
+        return {"gte": self.get_starting_replication_key_value()}
 
     def _make_params(self, limit: int = 100) -> dict:
         if self.replication_method == REPLICATION_INCREMENTAL:
