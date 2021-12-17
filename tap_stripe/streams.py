@@ -47,6 +47,7 @@ EVENT_TYPE_FILTERS = {
     "customers": {
         "types": ["customer.created", "customer.deleted", "customer.updated"]
     },
+    "discounts": {"type": "customer.discount.*"},
     "disputes": {"type": "charge.dispute.*"},
     "invoices": {"type": "invoice.*"},
     "payouts": {"type": "payout.*"},
@@ -160,6 +161,15 @@ class CustomersStream(StripeStream):
     primary_keys = ["id"]
     replication_key = "created"
     schema_filepath = SCHEMAS_DIR / "customers.schema.json"
+
+
+class DiscountsStream(StripeStream):
+    """Stripe Plans stream"""
+
+    name = "discounts"
+    primary_keys = ["id"]
+    replication_key = "created"
+    schema_filepath = SCHEMAS_DIR / "discounts.schema.json"
 
 
 class DisputesStream(StripeStream):

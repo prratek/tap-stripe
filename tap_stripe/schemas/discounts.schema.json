@@ -1,0 +1,314 @@
+{
+  "type": [
+    "null",
+    "object"
+  ],
+  "properties": {
+    "id": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "object": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "api_version": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "created": {
+      "type": [
+        "null",
+        "integer"
+      ]
+    },
+    "data": {
+      "type": [
+        "null",
+        "object"
+      ],
+      "properties": {
+        "object": {
+          "type": [
+            "null",
+            "object"
+          ],
+          "properties": {
+            "id": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "object": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "checkout_session": {
+              "type": [
+                "null"
+              ]
+            },
+            "coupon": {
+              "type": [
+                "null",
+                "object"
+              ],
+              "properties": {
+                "id": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "object": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "amount_off": {
+                  "type": [
+                    "null",
+                    "integer"
+                  ]
+                },
+                "created": {
+                  "type": [
+                    "null",
+                    "integer"
+                  ]
+                },
+                "currency": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "duration": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "duration_in_months": {
+                  "type": [
+                    "null",
+                    "integer"
+                  ]
+                },
+                "livemode": {
+                  "type": [
+                    "null",
+                    "boolean"
+                  ]
+                },
+                "max_redemptions": {
+                  "type": [
+                    "null"
+                  ]
+                },
+                "name": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "percent_off": {
+                  "type": [
+                    "null",
+                    "number"
+                  ]
+                },
+                "redeem_by": {
+                  "type": [
+                    "null"
+                  ]
+                },
+                "times_redeemed": {
+                  "type": [
+                    "null",
+                    "integer"
+                  ]
+                },
+                "valid": {
+                  "type": [
+                    "null",
+                    "boolean"
+                  ]
+                }
+              }
+            },
+            "customer": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "end": {
+              "type": [
+                "null",
+                "integer"
+              ]
+            },
+            "invoice": {
+              "type": [
+                "null"
+              ]
+            },
+            "invoice_item": {
+              "type": [
+                "null"
+              ]
+            },
+            "promotion_code": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "start": {
+              "type": [
+                "null",
+                "integer"
+              ]
+            },
+            "subscription": {
+              "type": [
+                "null",
+                "string"
+              ]
+            }
+          }
+        },
+        "previous_attributes": {
+          "type": [
+            "null",
+            "object"
+          ],
+          "properties": {
+            "id": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "coupon": {
+              "type": [
+                "null",
+                "object"
+              ],
+              "properties": {
+                "id": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "created": {
+                  "type": [
+                    "null",
+                    "integer"
+                  ]
+                },
+                "name": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "times_redeemed": {
+                  "type": [
+                    "null",
+                    "integer"
+                  ]
+                },
+                "amount_off": {
+                  "type": [
+                    "null",
+                    "integer"
+                  ]
+                },
+                "currency": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "duration_in_months": {
+                  "type": [
+                    "null",
+                    "integer"
+                  ]
+                },
+                "percent_off": {
+                  "type": [
+                    "null"
+                  ]
+                }
+              }
+            },
+            "end": {
+              "type": [
+                "null",
+                "integer"
+              ]
+            },
+            "start": {
+              "type": [
+                "null",
+                "integer"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "livemode": {
+      "type": [
+        "null",
+        "boolean"
+      ]
+    },
+    "pending_webhooks": {
+      "type": [
+        "null",
+        "integer"
+      ]
+    },
+    "request": {
+      "type": [
+        "null",
+        "object"
+      ],
+      "properties": {
+        "id": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "idempotency_key": {
+          "type": [
+            "null",
+            "string"
+          ]
+        }
+      }
+    },
+    "type": {
+      "type": [
+        "null",
+        "string"
+      ]
+    }
+  }
+}
