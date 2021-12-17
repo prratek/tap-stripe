@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "tap-stripe"
-version = "0.1.0"
+version = "0.1.1"
 description = "`tap-stripe` is Singer tap for Stripe, built with the Singer SDK."
 authors = ["Prratek Ramchandani"]
 license = "Apache 2.0"
