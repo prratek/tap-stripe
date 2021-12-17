@@ -1,7 +1,7 @@
 """Stream class for tap-stripe."""
 
 from pathlib import Path
-from typing import Iterable, Optional
+from typing import Iterable, List, Optional, Tuple
 
 import pendulum
 import stripe
@@ -62,6 +62,7 @@ class StripeStream(Stream):
     """Stream class for Stripe streams."""
 
     is_immutable = False
+    time_chunk_seconds = 60 * 24 * 24  # number of seconds in a day
 
     def get_starting_created_value(self, context: Optional[dict]) -> Optional[int]:
         val = self.get_starting_replication_key_value(context)
@@ -83,11 +84,11 @@ class StripeStream(Stream):
     def _make_created_filter(self, context: Optional[dict]) -> dict:
         return {"gte": self.get_starting_created_value(context)}
 
-    def _make_params(self, context: Optional[dict], limit: int = 100) -> dict:
+    def _make_params(self, start_epoch: int, end_epoch: int, limit: int = 100) -> dict:
         if self.replication_method == REPLICATION_INCREMENTAL:
             type_filter = {} if self.is_immutable else EVENT_TYPE_FILTERS[self.name]
             other_filters = {
-                "created": self._make_created_filter(context),
+                "created": {"gte": start_epoch, "lte": end_epoch},
                 "limit": limit,
             }
             return {**type_filter, **other_filters}
@@ -95,20 +96,34 @@ class StripeStream(Stream):
         elif self.replication_method == REPLICATION_FULL_TABLE:
             if self.name == "subscriptions":
                 return {
-                    "created": self._make_created_filter(context),
+                    "created": {"gte": start_epoch, "lte": end_epoch},
                     "limit": limit,
                     "status": "all",
                 }
             else:
-                return {"created": self._make_created_filter(context), "limit": limit}
+                return {
+                    "created": {"gte": start_epoch, "lte": end_epoch},
+                    "limit": limit,
+                }
 
         else:
             raise ValueError
 
+    def _make_time_chunks(self, context) -> Iterable[Tuple[int, int]]:
+        step = self.time_chunk_seconds
+        return (
+            (i, i + step)
+            for i in range(
+                self.get_starting_created_value(context),
+                pendulum.now().int_timestamp,
+                step,
+            )
+        )
+
     def _get_iterator(
-        self, context: Optional[dict], limit: int = 100
+        self, start_epoch: int, end_epoch: int, limit: int = 100
     ) -> StripeListObject:
-        params = self._make_params(context, limit=limit)
+        params = self._make_params(start_epoch, end_epoch, limit=limit)
         return self.sdk_object.list(**params)
 
     def get_records(self, context: Optional[dict]) -> Iterable[dict]:
@@ -120,10 +135,16 @@ class StripeStream(Stream):
         """
 
         stripe.api_key = self._config["api_key"]
-        iterator = self._get_iterator(context)
 
-        for row in iterator.auto_paging_iter():
-            yield row.to_dict()
+        for start, end in self._make_time_chunks(context):
+            iterator = self._get_iterator(start, end)
+
+            for row in iterator.auto_paging_iter():
+                yield row.to_dict()
+
+            self.finalize_state_progress_markers(
+                {"bookmarks": {self.name: {"replication_key_value": end}}}
+            )
 
 
 class BalanceTransactionsStream(StripeStream):
