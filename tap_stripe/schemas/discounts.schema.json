@@ -54,7 +54,8 @@
             },
             "checkout_session": {
               "type": [
-                "null"
+                "null",
+                "string"
               ]
             },
             "coupon": {
@@ -113,7 +114,8 @@
                 },
                 "max_redemptions": {
                   "type": [
-                    "null"
+                    "null",
+                    "integer"
                   ]
                 },
                 "name": {
@@ -130,7 +132,8 @@
                 },
                 "redeem_by": {
                   "type": [
-                    "null"
+                    "null",
+                    "integer"
                   ]
                 },
                 "times_redeemed": {
@@ -161,12 +164,14 @@
             },
             "invoice": {
               "type": [
-                "null"
+                "null",
+                "string"
               ]
             },
             "invoice_item": {
               "type": [
-                "null"
+                "null",
+                "string"
               ]
             },
             "promotion_code": {
@@ -251,7 +256,8 @@
                 },
                 "percent_off": {
                   "type": [
-                    "null"
+                    "null",
+                    "number"
                   ]
                 }
               }
