@@ -137,6 +137,8 @@ class StripeStream(Stream):
         stripe.api_key = self._config["api_key"]
 
         for start, end in self._make_time_chunks(context):
+            self.logger.info(f"Fetching {self.name} from {pendulum.from_timestamp(start)} "
+                             f"to {pendulum.from_timestamp(end)}")
             iterator = self._get_iterator(start, end)
 
             for row in iterator.auto_paging_iter():
