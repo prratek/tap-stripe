@@ -6,8 +6,8 @@ authors = ["Prratek Ramchandani"]
 license = "Apache 2.0"
 
 [tool.poetry.dependencies]
-python = ">=3.7.0,<3.10"
-singer-sdk = "^0.4.1"
+python = ">=3.6.2,<3.10"
+singer-sdk = "^0.3.12"
 stripe = "^2.56.0"
 
 [tool.poetry.dev-dependencies]
