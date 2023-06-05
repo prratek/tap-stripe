@@ -16,18 +16,16 @@ jobs:
 
     steps:
       - name: Checkout Branch
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Install Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
         with:
           python-version: ${{ matrix.python-version }}
 
-      - name: Install pipx and Poetry
+      - name: Install Poetry
         run: |
-          python3 -m pip install pipx
-          python3 -m pipx ensurepath
-          pipx install poetry
+          pip install poetry
 
       - name: Install Tap
         run: poetry install
