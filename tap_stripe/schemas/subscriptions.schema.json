@@ -147,7 +147,7 @@
             "default_payment_method": {
               "type": [
                 "null",
-                "integer"
+                "string"
               ]
             },
             "default_source": {
