@@ -946,6 +946,12 @@
                     "string"
                   ]
                 },
+                "redeemedPromoCodes": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
                 "type": {
                   "type": [
                     "null",
