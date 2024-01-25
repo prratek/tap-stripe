@@ -67,8 +67,18 @@ class StripeStream(Stream):
     def get_starting_created_value(self, context: Optional[dict]) -> Optional[int]:
         val = self.get_starting_replication_key_value(context)
         if isinstance(val, str):
-            return pendulum.parse(val).int_timestamp
+            val = pendulum.parse(val).int_timestamp
         assert isinstance(val, int)
+
+        if self.name == "disputes":
+            # For the disputes stream, increase the lookback window to 90 days (3 months).
+            # This is for several reasons:
+            # 1. Dispute volume is relatively small.
+            # 2. Dispute entities, not events, are being ingested. That means we are not capturing updates to dispute objects.
+            # This increased lookback window allows us to capture changes to any objects that occurred in the last 90 days.
+            # An ideal end state is to pass the lookback window as a config parameter to the Meltano stream,
+            # so it can be fine-tuned per stream.
+            val = val - (self.time_chunk_seconds * 90)
         return val
 
     @property
@@ -111,6 +121,12 @@ class StripeStream(Stream):
 
     def _make_time_chunks(self, context) -> Iterable[Tuple[int, int]]:
         step = self.time_chunk_seconds
+        if self.name == "disputes":
+            # Since dispute volume is so (relatively) low,
+            # we can process dispute in a single request that spans 90 days,
+            # rather than processing 90 one-day ingestion requests.
+            step = step * 90
+
         return (
             (i, i + step)
             for i in range(
