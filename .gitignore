@@ -5,3 +5,5 @@
 /.secrets/config.json
 .python-version
 .vscode/
+output/
+.idea/

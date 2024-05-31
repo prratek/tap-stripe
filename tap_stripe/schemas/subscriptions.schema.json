@@ -916,6 +916,18 @@
                     "string"
                   ]
                 },
+                "checkout_url_1": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "checkout_url_2": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
                 "cancel_reason": {
                   "type": [
                     "null",
