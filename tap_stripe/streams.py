@@ -17,6 +17,7 @@ SCHEMAS_DIR = Path(__file__).parent / Path("./schemas")
 SDK_OBJECTS = {
     "balance_transactions": stripe.BalanceTransaction,
     "charges": stripe.Charge,
+    "checkout_sessions": stripe.checkout.Session,
     "coupons": stripe.Coupon,
     "customers": stripe.Customer,
     "disputes": stripe.Dispute,
@@ -53,6 +54,7 @@ EVENT_TYPE_FILTERS = {
     "payouts": {"type": "payout.*"},
     "plans": {"type": "plan.*"},
     "promotion_codes": {"type": "promotion_code.*"},
+    "checkout_sessions": {"type": "checkout.session.*"},
     "subscription_schedules": {"type": "subscription_schedule.*"},
     "subscriptions": {"type": "customer.subscription.*"},
 }
@@ -182,6 +184,15 @@ class ChargesStream(StripeStream):
     primary_keys = ["id"]
     replication_key = "created"
     schema_filepath = SCHEMAS_DIR / "charges.schema.json"
+
+
+class CheckoutSessionsStream(StripeStream):
+    """Stripe Checkout Sessions stream."""
+
+    name = "checkout_sessions"
+    primary_keys = ["id"]
+    replication_key = "created"
+    schema_filepath = SCHEMAS_DIR / "checkout-sessions.schema.json"
 
 
 class CouponsStream(StripeStream):
