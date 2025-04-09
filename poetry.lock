@@ -1106,21 +1106,6 @@ files = [
 ]
 
 [[package]]
-name = "stripe"
-version = "11.6.0"
-description = "Python bindings for the Stripe API"
-optional = false
-python-versions = ">=3.6"
-files = [
-    {file = "stripe-11.6.0-py2.py3-none-any.whl", hash = "sha256:6e6cf09ebb6d5fc2d708401cb8868fd7bff987a6d09a0433caaa92c62f97dbc5"},
-    {file = "stripe-11.6.0.tar.gz", hash = "sha256:0ced7cce23a6cb1a393c86a1f7f9435c9d83ae7cbd556362868caf62cb44a92c"},
-]
-
-[package.dependencies]
-requests = {version = ">=2.20", markers = "python_version >= \"3.0\""}
-typing-extensions = {version = ">=4.5.0", markers = "python_version >= \"3.7\""}
-
-[[package]]
 name = "toml"
 version = "0.10.2"
 description = "Python Library for Tom's Obvious, Minimal Language"
@@ -1232,4 +1217,4 @@ test = ["covdefaults (>=2.3)", "coverage (>=7.2.7)", "coverage-enable-subprocess
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.9,<3.10"
-content-hash = "7074df309a8e3b3c6bb2ffd852d2320232af4205f4e9bee78575f3781c347550"
+content-hash = "f02a9339dc926416f93abd30745397ebb8c788d3260da95e20e57cc91c67d002"
