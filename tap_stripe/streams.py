@@ -7,10 +7,10 @@ import pendulum
 import stripe
 from singer_sdk.streams import Stream
 from singer_sdk.streams.core import REPLICATION_FULL_TABLE, REPLICATION_INCREMENTAL
-from stripe.api_resources.abstract import (
-    ListableAPIResource as StripeListableAPIResource,
-)
-from stripe.api_resources.list_object import ListObject as StripeListObject
+# from stripe.api_resources.abstract import (
+#     ListableAPIResource as StripeListableAPIResource,
+# )
+# from stripe.api_resources.list_object import ListObject as StripeListObject
 
 SCHEMAS_DIR = Path(__file__).parent / Path("./schemas")
 
@@ -84,7 +84,7 @@ class StripeStream(Stream):
         return val
 
     @property
-    def sdk_object(self) -> StripeListableAPIResource:
+    def sdk_object(self):
         if self.is_immutable:
             return SDK_OBJECTS[self.name]
         return (
@@ -140,7 +140,7 @@ class StripeStream(Stream):
 
     def _get_iterator(
         self, start_epoch: int, end_epoch: int, limit: int = 100
-    ) -> StripeListObject:
+    ):
         params = self._make_params(start_epoch, end_epoch, limit=limit)
         return self.sdk_object.list(**params)
 
