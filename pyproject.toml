@@ -6,7 +6,7 @@ authors = ["Prratek Ramchandani"]
 license = "Apache 2.0"
 
 [tool.poetry.dependencies]
-python = ">=3.9,<3.10"
+python = ">=3.9,<3.11"
 singer-sdk = "^0.45.1"
 # wheel = "<0.46.0"
 # setuptools = ">=70.1"
